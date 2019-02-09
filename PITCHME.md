@@ -31,7 +31,9 @@ To give you background knowledge (and code) to get started with Kubernetes
 
 ---
 
-<img src="assets/images/ytho.png" align="center"/>
+<p align="center">
+  <img src="assets/images/ytho.png" />
+</p>
 
 ---
 
