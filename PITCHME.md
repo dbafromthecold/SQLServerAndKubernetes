@@ -31,7 +31,7 @@ To give you background knowledge (and code) to get started with Kubernetes
 
 ---
 
-<img src="assets/images/ytho.png" style="float: center"/>
+![Why Though?](assets/images/ytho.png)
 
 ---
 
@@ -113,8 +113,6 @@ Desired state defined<br>
 Pushed to cluster via kubectl<br>
 Reconciliation loop compares desired state vs running state
 
----
-
 ---?code=assets/code/deployment_yaml_file.yaml&lang=yaml&title=Deployment yaml file
 
 @[3-6](Metadata of deployment)
@@ -163,7 +161,7 @@ PVC is attached to a pod
 
 ---
 
-## Demo
+# Demo
 
 ---
 
