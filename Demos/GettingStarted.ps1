@@ -1,0 +1,1 @@
+## https://dbafromthecold.com/2018/02/07/sql-server-in-kubernetes-on-docker-for-windows/

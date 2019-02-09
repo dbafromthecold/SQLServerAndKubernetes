@@ -15,9 +15,11 @@
 
 ### Session Aim
 
+To give you background knowledge (and code) to get started with Kubernetes
+
 ---
 
-### Kubernetes
+## Kubernetes
 
 <img src="assets/images/KubernetesLogo.png" style="float: right"/>
 
@@ -29,11 +31,22 @@
 
 ---
 
-### Why though?
+## Why though?
+
+<img src="assets/images/ytho.png" style="float: right"/>
+
+--
+
+## Why learn Kubernetes?
+
+Leading orchestrator<br>
+Easy to deploy and mantain containers<br>
+Quick to spin up containers<br>
+High availability build in
 
 ---
 
-### Getting Started
+## Getting Started
 
 Minikube<br>
 Docker for Desktop<br>
@@ -41,11 +54,11 @@ Visual Studio Code
 
 ---
 
-## Demo
+# Demo
 
 ---
 
-### Master
+## Master
 
 <img src="assets/images/master-128.png" style="float: right"/>
 
@@ -58,7 +71,7 @@ cloud-controller-manager<br>
 
 ---
 
-### Nodes
+## Nodes
 
 <img src="assets/images/node-128.png" style="float: right"/>
 
@@ -69,7 +82,7 @@ Docker
 
 ---
 
-### Pods
+## Pods
 
 <img src="assets/images/master-128.png" style="float: right"/>
 
@@ -79,7 +92,7 @@ Specification for how to run the containers
 
 ---
 
-### Services
+## Services
 
 <img src="assets/images/svc-128.png" style="float: right"/>
 
@@ -93,17 +106,42 @@ External Name
 
 ---
 
-### Deployments
+## Deployments
 
 <img src="assets/images/deploy-128.png" style="float: right"/>
 
+Declarative rather than procedural<br>
+Desired state defined<br>
+Pushed to cluster via kubectl<br>
+Reconciliation loop compares desired state vs running state
+
 ---
 
-## Demo
+---?code=assets/code/deployment_yaml_file.yaml&lang=yaml&title=Deployment yaml file
+
+@[3-6](Metadata of deployment)
+@[8](Number of replicas)
+@[13-23](Pod declaration)
+@[15](Pod name)
+@[16](Image to be used)
+@[17-18](Port on pod)
+@[19-23](Setting environment variables)
+@[24-35](Service)
+@[26-27](Metadata)
+@[29-32](Port on service to port on pod)
+@[33-35](Selector)
+@[35](External IP address)
+
+---
+
+# Demo
 
 ---
 
 ## Persisting data
+
+Same issue with Docker containers<br>
+Data changes not on a persistent volume will be lost
 
 ---
 
@@ -111,11 +149,19 @@ External Name
 
 <img src="assets/images/pv-128.png" style="float: right"/>
 
+Just a piece of storage in the cluster<br>
+Described by storage classes<br>
+Can be either dynamic or static
+
 ---
 
 ## Persistent Volume Claims
 
 <img src="assets/images/pvc-128.png" style="float: right"/>
+
+Request for storage by a user<br>
+Request for size and access type<br>
+PVC is attached to a pod
 
 ---
 
@@ -132,3 +178,6 @@ Google Kubernetes Service
 ---
 
 ## Resources
+
+https://github.com/dbafromthecold/SQLServerAndKubernetes<br>
+https://dbafromthecold.com/2017/03/15/summary-of-my-container-series/
