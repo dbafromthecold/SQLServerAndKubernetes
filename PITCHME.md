@@ -31,7 +31,7 @@ To give you background knowledge (and code) to get started with Kubernetes
 
 ---
 
-![Why Though?](assets/images/ytho.png)
+<img src="assets/images/ytho.png" align="center"/>
 
 ---
 
