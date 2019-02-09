@@ -19,6 +19,13 @@
 
 ### Kubernetes
 
+<img src="assets/images/KubernetesLogo.png" style="float: right"/>
+
+<br>
+@size[0.9em](Open source) <br>
+@size[0.9em](Deployed as a cluster) <br>
+
+
 ---
 
 ### Why though?
