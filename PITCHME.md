@@ -34,6 +34,10 @@
 
 ### Getting Started
 
+Minikube<br>
+Docker for Desktop<br>
+Visual Studio Code
+
 ---
 
 ## Demo
@@ -55,13 +59,19 @@
 
 ### Pods
 
+<img src="assets/images/master-128.png" style="float: right"/>
+
 ---
 
 ### Services
 
+<img src="assets/images/svc-128.png" style="float: right"/>
+
 ---
 
 ### Deployments
+
+<img src="assets/images/deploy-128.png" style="float: right"/>
 
 ---
 
@@ -75,9 +85,13 @@
 
 ## Persistent Volumes
 
+<img src="assets/images/pv.png" style="float: right"/>
+
 ---
 
 ## Persistent Volume Claims
+
+<img src="assets/images/pvc-128.png" style="float: right"/>
 
 ---
 
@@ -86,6 +100,10 @@
 ---
 
 ## Cloud Providers
+
+Azure Kubernetes Service<br>
+Amazon Elastic Container Service for Kubernetes<br>
+Google Kubernetes Service
 
 ---
 
