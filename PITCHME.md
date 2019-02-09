@@ -31,11 +31,9 @@ To give you background knowledge (and code) to get started with Kubernetes
 
 ---
 
-## Why though?
-
 <img src="assets/images/ytho.png" style="float: right"/>
 
---
+---
 
 ## Why learn Kubernetes?
 
@@ -62,7 +60,7 @@ Visual Studio Code
 
 <img src="assets/images/master-128.png" style="float: right"/>
 
-Contains the components for controlling the cluster<br>
+Components for controlling the cluster<br>
 kube-apiserver<br>
 etcd<br>
 kube-scheduler<br>
@@ -75,7 +73,7 @@ cloud-controller-manager<br>
 
 <img src="assets/images/node-128.png" style="float: right"/>
 
-Responsible for runninga and maintaining pods<br>
+Running and maintaining pods<br>
 kubelet<br>
 kube-proxy<br>
 Docker
