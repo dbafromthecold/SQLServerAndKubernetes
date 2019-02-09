@@ -49,12 +49,12 @@ Visual Studio Code
 
 <img src="assets/images/master-128.png" style="float: right"/>
 
-Contains the components for controlling the cluster
-kube-apiserver
-etcd
-kube-scheduler
-kube-controller-manager
-cloud-controller-manager
+Contains the components for controlling the cluster<br>
+kube-apiserver<br>
+etcd<br>
+kube-scheduler<br>
+kube-controller-manager<br>
+cloud-controller-manager<br>
 
 ---
 
@@ -62,9 +62,9 @@ cloud-controller-manager
 
 <img src="assets/images/node-128.png" style="float: right"/>
 
-Responsible for runninga and maintaining pods
-kubelet
-kube-proxy
+Responsible for runninga and maintaining pods<br>
+kubelet<br>
+kube-proxy<br>
 Docker
 
 ---
@@ -73,8 +73,8 @@ Docker
 
 <img src="assets/images/master-128.png" style="float: right"/>
 
-Group of one or more containers
-Shared storage/network
+Group of one or more containers<br>
+Shared storage/network<br>
 Specification for how to run the containers
 
 ---
@@ -83,12 +83,12 @@ Specification for how to run the containers
 
 <img src="assets/images/svc-128.png" style="float: right"/>
 
-An abstraction over a set of pods
-Provides a stable networking endpoint
-Different types: -
-ClusterIp
-NodePort
-LoadBalancer
+An abstraction over a set of pods<br>
+Provides a stable networking endpoint<br>
+Different types: -<br>
+ClusterIp<br>
+NodePort<br>
+LoadBalancer<br>
 External Name
 
 ---
