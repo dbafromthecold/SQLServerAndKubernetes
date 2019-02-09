@@ -15,6 +15,62 @@
 
 ### Session Aim
 
+---
 
+### Kubernetes
 
 ---
+
+### Why though?
+
+---
+
+### Getting Started
+
+---
+
+## Demo
+
+---
+
+### Nodes
+
+---
+
+### Pods
+
+---
+
+### Services
+
+---
+
+### Deployments
+
+---
+
+## Demo
+
+---
+
+## Persisting data
+
+---
+
+## Persistent Volumes
+
+--
+
+## Persistent Volume Claims
+
+--
+
+## Demo
+
+--
+
+## Cloud Providers
+
+--
+
+## Resources
