@@ -50,6 +50,8 @@ High availability build in
 
 Minikube<br>
 Docker for Desktop<br>
+minishift<br>
+micro k8s<br>
 Visual Studio Code
 
 ---
@@ -171,7 +173,8 @@ PVC is attached to a pod
 
 Azure Kubernetes Service<br>
 Amazon Elastic Container Service for Kubernetes<br>
-Google Kubernetes Service
+Google Kubernetes Service<br>
+IBM Kubernetes Service
 
 ---
 
