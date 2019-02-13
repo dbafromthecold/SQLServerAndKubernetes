@@ -52,6 +52,12 @@ cd /opt/mssql-tools/bin/
 
 
 
+# confirm sql version
+SELECT @@VERSION;
+GO
+
+
+
 # view service
 kubectl get services
 
