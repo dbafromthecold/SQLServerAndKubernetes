@@ -42,7 +42,8 @@ To give you background knowledge (and code) to get started with Kubernetes
 Leading orchestrator<br>
 Easy to deploy and mantain containers<br>
 Quick to spin up containers<br>
-High availability build in
+High availability built-in<br>
+Big Data Clusters
 
 ---
 
@@ -65,11 +66,11 @@ Visual Studio Code
 <img src="assets/images/master-128.png" style="float: right"/>
 
 Components for controlling the cluster<br>
-kube-apiserver<br>
-etcd<br>
-kube-scheduler<br>
-kube-controller-manager<br>
-cloud-controller-manager<br>
+@size[0.9em](kube-apiserver)<br>
+@size[0.9em](etcd)<br>
+@size[0.9em](kube-scheduler)<br>
+@size[0.9em](kube-controller-manager)<br>
+@size[0.9em](cloud-controller-manager)<br>
 
 ---
 
@@ -78,9 +79,9 @@ cloud-controller-manager<br>
 <img src="assets/images/node-128.png" style="float: right"/>
 
 Running and maintaining pods<br>
-kubelet<br>
-kube-proxy<br>
-Docker
+@size[0.9em](kubelet)<br>
+@size[0.9em](kube-proxy)<br>
+@size[0.9em](Docker)
 
 ---
 
@@ -101,10 +102,10 @@ Specification for how to run the containers
 An abstraction over a set of pods<br>
 Provides a stable networking endpoint<br>
 Different types: -<br>
-ClusterIp<br>
-NodePort<br>
-LoadBalancer<br>
-External Name
+@size[0.9em](ClusterIp)<br>
+@size[0.9em](NodePort)<br>
+@size[0.9em](LoadBalancer)<br>
+@size[0.9em](External Name)
 
 ---
 
@@ -115,7 +116,7 @@ External Name
 Declarative rather than procedural<br>
 Desired state defined<br>
 Pushed to cluster via kubectl<br>
-Reconciliation loop compares desired state vs running state
+Desired state vs running state
 
 ---?code=assets/code/deployment_yaml_file.yaml&lang=yaml&title=Deployment yaml file
 
