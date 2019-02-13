@@ -6,7 +6,7 @@ provisioner: kubernetes.io/azure-disk
 parameters:
   storageaccounttype: Standard_LRS
   kind: Managed
----
+
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
