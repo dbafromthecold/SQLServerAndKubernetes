@@ -82,9 +82,12 @@ Components for controlling the cluster<br>
 <img src="assets/images/node-128.png" style="float: right"/>
 
 Running and maintaining pods<br>
-@size[0.9em](kubelet)<br>
-@size[0.9em](kube-proxy)<br>
-@size[0.9em](Docker)
+
+@ul
+- @size[0.9em](kubelet)<br>
+- @size[0.9em](kube-proxy)<br>
+- @size[0.9em](Docker)
+@ulend
 
 ---
 
@@ -105,10 +108,13 @@ Specification for how to run the containers
 An abstraction over a set of pods<br>
 Provides a stable networking endpoint<br>
 Different types: -<br>
-@size[0.9em](ClusterIp)<br>
-@size[0.9em](NodePort)<br>
-@size[0.9em](LoadBalancer)<br>
-@size[0.9em](External Name)
+
+@ul
+- @size[0.9em](ClusterIp)<br>
+- @size[0.9em](NodePort)<br>
+- @size[0.9em](LoadBalancer)<br>
+- @size[0.9em](External Name)
+@ul
 
 ---
 
