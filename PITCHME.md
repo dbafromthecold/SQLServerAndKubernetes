@@ -57,9 +57,15 @@ Big Data Clusters
 
 Minikube<br>
 Docker for Desktop<br>
-minishift<br>
-micro k8s<br>
-Visual Studio Code
+Minishift<br>
+Micro k8s<br>
+
+---
+
+## Other tools
+
+Visual Studio Code<br>
+Kubectl
 
 ---
 
