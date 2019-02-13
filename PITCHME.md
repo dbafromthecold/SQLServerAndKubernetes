@@ -66,11 +66,14 @@ Visual Studio Code
 <img src="assets/images/master-128.png" style="float: right"/>
 
 Components for controlling the cluster<br>
-@size[0.9em](kube-apiserver)<br>
-@size[0.9em](etcd)<br>
-@size[0.9em](kube-scheduler)<br>
-@size[0.9em](kube-controller-manager)<br>
-@size[0.9em](cloud-controller-manager)<br>
+
+@ul
+- @size[0.9em](kube-apiserver)<br>
+- @size[0.9em](etcd)<br>
+- @size[0.9em](kube-scheduler)<br>
+- @size[0.9em](kube-controller-manager)<br>
+- @size[0.9em](cloud-controller-manager)<br>
+@ulend
 
 ---
 
