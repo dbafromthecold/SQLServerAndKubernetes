@@ -1,0 +1,46 @@
+# https://dbafromthecold.com/2017/11/15/running-sql-server-in-kubernetes-on-azure-container-services-aks-ii/
+
+
+
+# get current context
+kubectl config current-context
+
+
+
+# confirm connection to cluster by viewing nodes
+kubectl get nodes
+
+
+
+# view yaml file
+cat C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\sqlserver.yml
+
+
+
+# deploy to cluster
+kubectl create -f C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\sqlserver.yml
+
+
+
+# view deployment
+kubectl get deployments
+
+
+
+# view pods
+kubectl get pods
+
+
+
+# view service
+kubectl get service
+
+
+
+# delete pod
+kubectl delete pod podname
+
+
+
+# view pods
+kubectl get pods

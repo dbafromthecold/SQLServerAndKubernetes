@@ -1,0 +1,64 @@
+# https://dbafromthecold.com/2018/01/24/configuring-persistent-storage-for-sql-in-aks/
+
+
+# list contexts
+kubectl config view
+
+
+# get current context
+kubectl config current-context
+
+
+
+# switch context to remote cluster
+kubectl config use-context SQLK8sCluster1
+
+
+
+# confirm connection to cluster by viewing nodes
+kubectl get nodes
+
+
+
+# view yaml file
+cat C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\persistentvolume.yaml
+
+
+
+# deploy to cluster
+kubectl create -f C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\persistentvolume.yaml
+
+
+
+# view yaml file
+cat C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\sqlserver.yaml
+
+
+
+# deploy to cluster
+kubectl create -f C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\sqlserver2.yml
+
+
+
+# view deployment
+kubectl get deployments
+
+
+
+# view pods
+kubectl get pods
+
+
+
+# view service
+kubectl get service
+
+
+
+# delete pod
+kubectl delete pod podname
+
+
+
+# view pods
+kubectl get pods
