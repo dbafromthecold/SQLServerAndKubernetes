@@ -53,7 +53,11 @@ Big Data Clusters
 
 ---
 
-## Getting Started
+# Getting Started
+
+--
+
+## Running Kubernetes locally
 
 Minikube<br>
 Docker for Desktop<br>
@@ -70,6 +74,10 @@ Kubectl
 ---
 
 # Demo
+
+---
+
+# Deploying to a remote cluster
 
 ---
 
@@ -157,6 +165,10 @@ Desired state vs running state
 ---
 
 # Demo
+
+---
+
+# Persisting data
 
 ---
 
