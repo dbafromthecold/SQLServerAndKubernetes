@@ -13,7 +13,7 @@ spec:
 spec:
       containers:
       - name: sqlserver1
-        image: testcontainerregistry01.azurecr.io/devsqlimage:latest
+        image: mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
         ports:
         - containerPort: 1433
         env:
