@@ -150,8 +150,7 @@ Different types: -<br>
 @[24-35](Service)
 @[26-27](Metadata)
 @[29-32](Port on service to port on pod)
-@[33-35](Selector)
-@[35](External IP address)
+@[33-35](External IP address)
 
 ---
 

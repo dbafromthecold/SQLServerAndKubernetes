@@ -12,7 +12,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: mssql
-        image: microsoft/mssql-server-linux
+        image: mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
         ports:
         - containerPort: 1433
         env:
