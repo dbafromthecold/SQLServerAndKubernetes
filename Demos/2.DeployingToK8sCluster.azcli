@@ -2,8 +2,18 @@
 
 
 
+# list contexts
+kubectl config view
+
+
+
 # get current context
 kubectl config current-context
+
+
+
+# switch context to remote cluster
+kubectl config use-context SQLK8sCluster1
 
 
 
@@ -22,7 +32,7 @@ cd C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\
 
 
 
-# view yaml file
+# view sql yaml file
 cat sqlserver.yaml
 
 
@@ -62,7 +72,7 @@ kubectl get pods
 
 
 # delete pod
-kubectl delete pod sqlserver-77768bb54d-xg5gv
+kubectl delete pod podname
 
 
 

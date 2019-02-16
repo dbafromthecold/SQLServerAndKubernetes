@@ -1,8 +1,10 @@
 # https://dbafromthecold.com/2018/01/24/configuring-persistent-storage-for-sql-in-aks/
 
 
+
 # list contexts
 kubectl config view
+
 
 
 # get current context
@@ -15,28 +17,68 @@ kubectl config use-context SQLK8sCluster1
 
 
 
+# get cluster info
+kubectl cluster-info
+
+
+
 # confirm connection to cluster by viewing nodes
 kubectl get nodes
 
 
 
-# view yaml file
-cat C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\persistentvolume.yaml
+# navigate to yaml file
+cd C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\
+
+
+
+# view storageclass yaml file
+cat storageclass.yaml
+
+
+
+# view storage class
+kubectl get storageclass
+
+
+
+# view pv yaml file
+cat persistentvolumeclaim.yaml
 
 
 
 # deploy to cluster
-kubectl create -f C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\persistentvolume.yaml
+kubectl create -f persistentvolume.yaml
 
 
 
-# view yaml file
-cat C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\sqlserver.yaml
+# view storage class
+kubectl get storageclass
+
+
+
+# view persistent volume
+kubectl get pv
+
+
+
+# view persistent volume claim
+kubectl get pvc
+
+
+
+# create secret
+kubectl create secret generic mssql --from-literal=SA_PASSWORD="Testing1122"
+
+
+
+# view sql yaml file
+cat sqlserver2.yaml
 
 
 
 # deploy to cluster
-kubectl create -f C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\sqlserver2.yml
+kubectl create -f sqlserver2.yaml
 
 
 
@@ -50,8 +92,18 @@ kubectl get pods
 
 
 
+# describe pods
+kubectl describe pods
+
+
+
 # view service
 kubectl get service
+
+
+
+# get pods
+kubectl get pods
 
 
 
@@ -62,3 +114,19 @@ kubectl delete pod podname
 
 # view pods
 kubectl get pods
+
+
+
+# view pvc
+kubectl get pvc
+
+
+
+# get service
+kubectl get service
+
+
+
+# clean up
+kubectl delete deployment mssql-deployment
+kubectl delete service mssql-deployment
