@@ -7,18 +7,28 @@ kubectl config current-context
 
 
 
+# get cluster info
+kubectl cluster-info
+
+
+
 # confirm connection to cluster by viewing nodes
 kubectl get nodes
 
 
 
+# navigate to yaml file
+cd C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\
+
+
+
 # view yaml file
-cat C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\sqlserver.yml
+cat sqlserver.yaml
 
 
 
 # deploy to cluster
-kubectl create -f C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\sqlserver.yml
+kubectl create -f sqlserver.yaml
 
 
 
@@ -32,15 +42,40 @@ kubectl get pods
 
 
 
+# get more info on pods
+kubectl get pods -o wide
+
+
+
+# describe pods
+kubectl describe pods
+
+
+
 # view service
 kubectl get service
 
 
 
+# get pods
+kubectl get pods
+
+
 # delete pod
-kubectl delete pod podname
+kubectl delete pod sqlserver-77768bb54d-xg5gv
 
 
 
 # view pods
 kubectl get pods
+
+
+
+# get service
+kubectl get service
+
+
+
+# clean up
+kubectl delete deployment sqlserver
+kubectl delete service sqlserver-service
