@@ -48,22 +48,17 @@ cat persistentvolumeclaim.yaml
 
 
 # deploy to cluster
-kubectl create -f persistentvolume.yaml
-
-
-
-# view storage class
-kubectl get storageclass
-
-
-
-# view persistent volume
-kubectl get pv
+kubectl create -f persistentvolumeclaim.yaml
 
 
 
 # view persistent volume claim
-kubectl get pvc
+kubectl get persistentvolumeclaim
+
+
+
+# view persistent volume
+kubectl get persistentvolume
 
 
 
