@@ -55,7 +55,7 @@ Big Data Clusters
 
 # Getting Started
 
---
+---
 
 ## Running Kubernetes locally
 
@@ -69,7 +69,8 @@ Micro k8s<br>
 ## Other tools
 
 Visual Studio Code<br>
-Kubectl
+Kubectl<br>
+kube-shell
 
 ---
 
@@ -147,7 +148,7 @@ Desired state defined<br>
 Pushed to cluster via kubectl<br>
 Desired state vs running state
 
----?code=assets/code/deployment_yaml_file.yaml&lang=yaml&title=Deployment yaml file
+---?code=assets/code/deployment_yaml_file.yaml&lang=yaml&title=Example yaml file
 
 @[3-6](Metadata of deployment)
 @[8](Number of replicas)
