@@ -116,9 +116,10 @@ Running and maintaining pods<br>
 
 <img src="assets/images/master-128.png" style="float: right"/>
 
+Smallest deployable units of computing<br>
 Group of one or more containers<br>
 Shared storage/network<br>
-Specification for how to run the containers
+Holds specifications of containers
 
 ---
 
@@ -136,17 +137,6 @@ Different types: -<br>
 - @size[0.9em](LoadBalancer)<br>
 - @size[0.9em](External Name)
 @ul
-
----
-
-## Deployments
-
-<img src="assets/images/deploy-128.png" style="float: right"/>
-
-Declarative rather than procedural<br>
-Desired state defined<br>
-Pushed to cluster via kubectl<br>
-Desired state vs running state
 
 ---?code=assets/code/deployment_yaml_file.yaml&lang=yaml&title=Example yaml file
 
