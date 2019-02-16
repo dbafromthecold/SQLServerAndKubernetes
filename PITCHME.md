@@ -147,10 +147,10 @@ Different types: -<br>
 @[14](Image to be used)
 @[15-16](Port)
 @[17-21](Setting environment variables)
-@[24-35](Service)
-@[26-27](Metadata)
-@[29-32](Port on service to port on pod)
-@[33-35](External IP address)
+@[22-35](Service)
+@[24-25](Metadata)
+@[27-30](Port on service to port on pod)
+@[31-33](External IP address)
 
 ---
 
