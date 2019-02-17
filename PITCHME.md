@@ -174,7 +174,7 @@ Data changes not on a persistent volume will be lost
 <img src="assets/images/pv-128.png" style="float: right"/>
 
 Just a piece of storage in the cluster<br>
-Described by storage classes<br>
+Lifecycle independent of the pods that use them<br>
 Can be either dynamic or static
 
 ---
@@ -190,7 +190,7 @@ PVC is attached to a pod
 ---?code=assets/code/persistentvolume.yaml&lang=yaml&title=Persistent Volume yaml file
 
 @[1-8](Create storage class)
-@[10-21](Define persistent volume claim)
+@[10-20](Define persistent volume claim)
 
 ---
 

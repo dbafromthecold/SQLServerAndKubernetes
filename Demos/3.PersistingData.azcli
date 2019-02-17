@@ -73,7 +73,7 @@ cat sqlserver2.yaml
 
 
 # deploy to cluster
-kubectl create -f sqlserver2.yaml
+kubectl create -f sqlserver3.yaml
 
 
 
@@ -103,7 +103,7 @@ kubectl get pods
 
 
 # delete pod
-kubectl delete pod podname
+kubectl delete pod PODNAME
 
 
 
@@ -123,5 +123,5 @@ kubectl get service
 
 
 # clean up
-kubectl delete deployment mssql-deployment
-kubectl delete service mssql-deployment
+kubectl delete deployment sqlserver2
+kubectl delete service sqlserver2-service
