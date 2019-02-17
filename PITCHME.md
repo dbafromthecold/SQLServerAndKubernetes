@@ -174,7 +174,7 @@ Data changes not on a persistent volume will be lost
 <img src="assets/images/pv-128.png" style="float: right"/>
 
 Just a piece of storage in the cluster<br>
-Lifecycle independent of the pods that use them<br>
+Lifecycle independent of the pods<br>
 Can be either dynamic or static
 
 ---

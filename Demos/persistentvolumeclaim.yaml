@@ -4,7 +4,7 @@ metadata:
   name: mssql-data
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   storageClassName: azure-disk
   resources:
     requests:
