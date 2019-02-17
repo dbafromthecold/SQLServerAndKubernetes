@@ -42,7 +42,7 @@ kubectl get storageclass
 
 
 
-# view pv yaml file
+# view pvc yaml file
 cat persistentvolumeclaim.yaml
 
 
