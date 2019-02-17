@@ -127,6 +127,16 @@ kubectl get service
 
 
 
+# describe pod
+kubectl describe pods
+
+
+
+# view pods
+kubectl get pods
+
+
+
 # clean up
 kubectl delete deployment sqlserver2
 kubectl delete service sqlserver2-service
