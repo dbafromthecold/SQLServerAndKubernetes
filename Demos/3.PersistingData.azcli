@@ -17,11 +17,6 @@ kubectl config use-context SQLK8sCluster1
 
 
 
-# get cluster info
-kubectl cluster-info
-
-
-
 # confirm connection to cluster by viewing nodes
 kubectl get nodes
 
@@ -103,7 +98,7 @@ kubectl get pods
 
 
 # delete pod
-kubectl delete pod PODNAME
+kubectl delete pod sqlserver2-bf664df88-f6jxk
 
 
 

@@ -12,11 +12,6 @@ kubectl config current-context
 
 
 
-# view info on cluster
-kubectl cluster info
-
-
-
 # view nodes
 kubectl get nodes
 
