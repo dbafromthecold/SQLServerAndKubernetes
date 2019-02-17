@@ -187,10 +187,14 @@ Request for storage by a user<br>
 Request for size and access type<br>
 PVC is attached to a pod
 
----?code=assets/code/persistentvolume.yaml&lang=yaml&title=Persistent Volume yaml file
+---?code=assets/code/persistentvolumeclaim.yaml&lang=yaml&title=Persistent Volume yaml file
 
 @[1-8](Create storage class)
 @[10-20](Define persistent volume claim)
+
+---?code=assets/code/persistentvolumeclaim.yaml&lang=yaml&title=Persistent Volume yaml file
+
+@[25-31](Reference to PVC)
 
 ---
 
