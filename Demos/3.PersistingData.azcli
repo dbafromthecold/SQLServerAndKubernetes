@@ -57,6 +57,11 @@ kubectl get persistentvolumeclaim
 
 
 
+# describe persistent volume claim
+kubectl describe persistentvolumeclaim
+
+
+
 # view persistent volume
 kubectl get persistentvolume
 
@@ -73,7 +78,7 @@ cat sqlserver2.yaml
 
 
 # deploy to cluster
-kubectl create -f sqlserver3.yaml
+kubectl create -f sqlserver2.yaml
 
 
 
@@ -103,7 +108,7 @@ kubectl get pods
 
 
 # delete pod
-kubectl delete pod sqlserver2-bf664df88-f6jxk
+kubectl delete pod PODNAME
 
 
 
