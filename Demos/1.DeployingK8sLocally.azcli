@@ -86,3 +86,9 @@ kubectl proxy
 
 # connect to dashboard
 http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
+
+
+
+# clean up
+kubectl delete deployment sqlserver
+kubectl delete service sqlserver
