@@ -32,6 +32,11 @@ cat storageclass.yaml
 
 
 
+# deploy to cluster
+kubectl create -f storageclass.yaml
+
+
+
 # view storage class
 kubectl get storageclass
 
