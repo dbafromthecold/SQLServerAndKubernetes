@@ -218,5 +218,5 @@ IBM Kubernetes Service
 
 
 <p align="center">
-  <img src="assets/images/SqlServerAndKubernetes.png" />
+  <img src="assets/images/SqlServerAndKubernetesQr.png" />
 </p>
