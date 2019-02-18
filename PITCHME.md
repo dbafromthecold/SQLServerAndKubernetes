@@ -215,3 +215,8 @@ IBM Kubernetes Service
 
 @size[0.8em](http://tinyurl.com/yyz8fe9x/SQLServerAndKubernetes)<br>
 @size[0.8em](http://tinyurl.com/y3x29t3j/summary-of-my-container-series/)
+
+
+<p align="center">
+  <img src="assets/images/SqlServerAndKubernetes.png" />
+</p>
