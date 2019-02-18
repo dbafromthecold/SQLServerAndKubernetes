@@ -68,7 +68,7 @@ kubectl get service
 
 
 # get pods
-kubectl get pods
+kubectl get pods -o wide
 
 
 # delete pod
