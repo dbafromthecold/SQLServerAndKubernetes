@@ -213,5 +213,5 @@ IBM Kubernetes Service
 
 ## Resources
 
-https://github.com/dbafromthecold/SQLServerAndKubernetes<br>
+http://tinyurl.com/yyz8fe9x/SQLServerAndKubernetes<br>
 https://dbafromthecold.com/2017/03/15/summary-of-my-container-series/
