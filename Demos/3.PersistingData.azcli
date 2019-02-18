@@ -73,12 +73,12 @@ kubectl create secret generic mssql --from-literal=SA_PASSWORD="Testing1122"
 
 
 # view sql yaml file
-cat sqlserver2.yaml
+cat sqlserver3.yaml
 
 
 
 # deploy to cluster
-kubectl create -f sqlserver2.yaml
+kubectl create -f sqlserver3.yaml
 
 
 
@@ -136,7 +136,3 @@ kubectl describe pods
 kubectl get pods
 
 
-
-# clean up
-kubectl delete deployment sqlserver2
-kubectl delete service sqlserver2-service

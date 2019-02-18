@@ -28,12 +28,12 @@ cd C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\
 
 
 # view sql yaml file
-cat sqlserver.yaml
+cat sqlserver2.yaml
 
 
 
 # deploy to cluster
-kubectl create -f sqlserver.yaml
+kubectl create -f sqlserver2.yaml
 
 
 
@@ -78,9 +78,3 @@ kubectl get pods -o wide
 
 # get service
 kubectl get service
-
-
-
-# clean up
-kubectl delete deployment sqlserver
-kubectl delete service sqlserver-service
