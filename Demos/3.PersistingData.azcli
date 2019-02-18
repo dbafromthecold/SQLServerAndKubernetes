@@ -2,8 +2,8 @@
 
 
 
-# list clusters
-kubectl config get-clusters
+# list contexts
+kubectl config get-contexts
 
 
 
