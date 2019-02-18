@@ -12,6 +12,26 @@ kubectl config current-context
 
 
 
+# list clusters
+kubectl config get-clusters
+
+
+
+# get current context
+kubectl config current-context
+
+
+
+# switch context to local cluster
+kubectl config use-context docker-for-desktop-cluster
+
+
+
+# confirm kubectl context
+kubectl config current-context
+
+
+
 # view nodes
 kubectl get nodes
 
