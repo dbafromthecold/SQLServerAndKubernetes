@@ -213,5 +213,5 @@ IBM Kubernetes Service
 
 ## Resources
 
-http://tinyurl.com/yyz8fe9x/SQLServerAndKubernetes<br>
+@size[0.8em](http://tinyurl.com/yyz8fe9x/SQLServerAndKubernetes)<br>
 https://dbafromthecold.com/2017/03/15/summary-of-my-container-series/
