@@ -3,7 +3,7 @@
 
 
 # check images
-docker container images
+docker images
 
 
 

@@ -72,6 +72,16 @@ kubectl create secret generic mssql --from-literal=SA_PASSWORD="Testing1122"
 
 
 
+# view secret
+kubectl get secrets
+
+
+
+# describe secret
+kubectl describe secret
+
+
+
 # view sql yaml file
 cat sqlserver3.yaml
 
@@ -103,17 +113,17 @@ kubectl get service
 
 
 # get pods
-kubectl get pods
+kubectl get pods -o wide
 
 
 
 # delete pod
-kubectl delete pod PODNAME
+kubectl delete pod sqlserver3-6bcb996d6b-2wdss
 
 
 
 # view pods
-kubectl get pods
+kubectl get pods -o wide
 
 
 
@@ -128,7 +138,7 @@ kubectl get service
 
 
 # describe pod
-kubectl describe pods
+kubectl describe pods sqlserver3-6bcb996d6b-vk8px
 
 
 
@@ -136,3 +146,6 @@ kubectl describe pods
 kubectl get pods
 
 
+
+# get service
+kubectl get service
