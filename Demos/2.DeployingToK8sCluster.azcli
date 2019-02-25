@@ -38,7 +38,8 @@ cat sqlserver2.yaml
 
 
 # deploy to cluster
-kubectl create -f sqlserver2.yaml
+
+kubectl apply -f sqlserver2.yaml
 
 
 

@@ -49,7 +49,7 @@ kubectl get pods
 
 
 # exec into pod
-kubectl exec -it sqlserver-5bbd84fc8f-xwlch bash
+kubectl exec -it PODNAME bash
 
 
 
