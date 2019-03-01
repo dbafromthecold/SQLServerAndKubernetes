@@ -38,7 +38,6 @@ cat sqlserver2.yaml
 
 
 # deploy to cluster
-
 kubectl apply -f sqlserver2.yaml
 
 
