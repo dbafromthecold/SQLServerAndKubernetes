@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: sqlserver3
-        image: mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+        image: mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
         ports:
         - containerPort: 1433
         env:
