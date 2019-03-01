@@ -192,7 +192,7 @@ PVC is attached to a pod
 @[1-8](Create storage class)
 @[10-20](Define persistent volume claim)
 
---?code=assets/code/createsecret.yaml&lang=yaml&title=Creating Kubernetes Secret
+---?code=assets/code/createsecret.yaml&lang=yaml&title=Creating Kubernetes Secret
 
 @[1](Create Secret)
 
