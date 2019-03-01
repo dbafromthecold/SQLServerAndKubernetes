@@ -10,7 +10,6 @@
 @fa[envelope] dbafromthecold@gmail.com <br>
 @fa[wordpress] www.dbafromthecold.com <br>
 @fa[github] github.com/dbafromthecold
-
 ---
 
 ### Session Aim
@@ -221,7 +220,9 @@ IBM Kubernetes Service
 <img src="assets/images/Helm.png" style="float: right"/>
 
 Package manager for Kubernetes<br>
-SQL Server chart available in the Helm Hub
+SQL Server available in the Helm Hub<br>
+https://hub.helm.sh/
+
 
 ---
 
