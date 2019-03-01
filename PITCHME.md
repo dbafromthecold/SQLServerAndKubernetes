@@ -216,6 +216,14 @@ IBM Kubernetes Service
 
 ---
 
+## Helm
+
+<img src="assets/images/helm.png" style="float: right"/>
+
+Package manager for Kubernetes<br>
+SQL Server chart available in the Helm Hub
+
+
 ## Resources
 
 @size[0.8em](http://tinyurl.com/yyz8fe9x/SQLServerAndKubernetes)<br>
