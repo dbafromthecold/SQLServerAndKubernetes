@@ -111,6 +111,9 @@ kubectl get pods
 kubectl describe pods
 
 
+# view pods
+kubectl get pods
+
 
 # exec into pod
 kubectl exec -it PODNAME bash
