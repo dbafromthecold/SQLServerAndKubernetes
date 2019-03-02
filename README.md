@@ -1,2 +1,5 @@
 # SQL Server And Kubernetes
-Slides and code for my SQL Server and Kubernetes presentation
+
+Code for my SQL Server and Kubernetes presentation
+
+Slides are here:- https://gitpitch.com/dbafromthecold/SQLServerAndKubernetes
