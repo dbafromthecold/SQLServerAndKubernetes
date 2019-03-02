@@ -131,7 +131,7 @@ Provides a stable networking endpoint<br>
 Different types: -<br>
 
 @ul
-- @size[0.9em](ClusterIp)<br>
+- @size[0.9em](ClusterIP)<br>
 - @size[0.9em](NodePort)<br>
 - @size[0.9em](LoadBalancer)<br>
 - @size[0.9em](External Name)

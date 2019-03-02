@@ -54,7 +54,7 @@ kubectl get pods
 
 
 # exec into pod
-kubectl exec -it sqlserver-78d6c5fb5b-h7nhq bash
+kubectl exec -it PODNAME bash
 
 
 
@@ -84,18 +84,8 @@ kubectl expose deployment sqlserver --type=LoadBalancer --port=1433 --target-por
 
 
 
-# view service
-kubectl get services
-
-
-
 # deploy dashboard
 kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/aio/deploy/recommended/kubernetes-dashboard.yaml
-
-
-
-# get token
-kubectl -n kube-system describe secret
 
 
 
@@ -106,6 +96,11 @@ kubectl proxy
 
 # connect to dashboard
 http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
+
+
+
+# get token
+kubectl -n kube-system describe secret
 
 
 
