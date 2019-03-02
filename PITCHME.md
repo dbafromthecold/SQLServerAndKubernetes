@@ -10,6 +10,11 @@
 @fa[envelope] dbafromthecold@gmail.com <br>
 @fa[wordpress] www.dbafromthecold.com <br>
 @fa[github] github.com/dbafromthecold
+
+<p align="right">
+  #K8sAtSQLBits
+</p>
+
 ---
 
 ### Session Aim
