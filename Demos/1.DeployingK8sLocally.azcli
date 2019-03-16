@@ -3,7 +3,7 @@
 
 
 # get tags
-$repo = invoke-webrequest https://mcr.microsoft.com/v2/mssql/server/tags/list
+$repo = invoke-webrequest https://mcr.microsoft.com/v2/mssql/server/tags/list -UseBasicParsing
 $repo.content
 
 

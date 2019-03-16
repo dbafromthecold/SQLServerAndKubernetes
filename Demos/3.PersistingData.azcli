@@ -28,7 +28,7 @@ kubectl get nodes
 
 
 # navigate to yaml file
-cd C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\
+cd ~/git/SQLServerAndKubernetes/Demos/
 
 
 

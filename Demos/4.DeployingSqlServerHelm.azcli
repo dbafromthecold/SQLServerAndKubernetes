@@ -18,17 +18,25 @@ helm search stable/mssql-linux
 
 
 # perform test deployment
-helm install --name sql-server stable/mssql-linux \
+helm install --name sqlserver stable/mssql-linux \
 --dry-run --debug
 
 
 
+# search for chart in private repo
+helm search dbafromthecold/sqlserver2019
+
+
+
+# perform test deployment from private repo
+helm install --name sqlserver2019 dbafromthecold/sqlserver2019 --version 0.2.3 \
+--dry-run --debug
+
+
+
+
 # deploy
-helm install \
---name sql-server stable/mssql-linux \
---set acceptEula.value=Y \
---set sapassword=Testing1122 \
---set edition.value=Developer
+helm install --name sqlserver2019 dbafromthecold/sqlserver2019 --version 0.2.3
 
 
 

@@ -207,15 +207,6 @@ PVC is attached to a pod
 
 ---
 
-## Cloud Providers
-
-Azure Kubernetes Service<br>
-Amazon Elastic Container Service for Kubernetes<br>
-Google Kubernetes Service<br>
-IBM Kubernetes Service
-
----
-
 ## Helm
 
 <img src="assets/images/Helm.png" style="float: right"/>
@@ -224,6 +215,9 @@ Package manager for Kubernetes<br>
 SQL Server available in the Helm Hub<br>
 https://hub.helm.sh/
 
+---
+
+# Demo
 
 ---
 
