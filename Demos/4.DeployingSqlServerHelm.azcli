@@ -34,7 +34,6 @@ helm install --name sqlserver2019 dbafromthecold/sqlserver2019 --version 0.2.3 \
 
 
 
-
 # deploy
 helm install --name sqlserver2019 dbafromthecold/sqlserver2019 --version 0.2.3
 
