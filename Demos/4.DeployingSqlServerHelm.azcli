@@ -1,0 +1,52 @@
+## https://dbafromthecold.com/2019/01/16/deploying-sql-server-to-kubernetes-using-helm/
+
+
+
+# install tiller on cluster
+helm init
+
+
+
+# confirm helm version
+helm version
+
+
+
+# search for Sql Server chart
+helm search stable/mssql-linux
+
+
+
+# perform test deployment
+helm install --name sql-server stable/mssql-linux \
+--dry-run --debug
+
+
+
+# deploy
+helm install \
+--name sql-server stable/mssql-linux \
+--set acceptEula.value=Y \
+--set sapassword=Testing1122 \
+--set edition.value=Developer
+
+
+
+# confirm deployment
+helm list
+
+
+
+# list deployments
+kubectl get deployments
+
+
+
+# list pods
+kubectl get pods
+
+
+
+# list services
+kubectl get services
+
