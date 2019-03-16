@@ -23,6 +23,11 @@ helm install --name sqlserver stable/mssql-linux \
 
 
 
+# list helm repos
+helm repo list
+
+
+
 # search for chart in private repo
 helm search dbafromthecold/sqlserver2019
 
