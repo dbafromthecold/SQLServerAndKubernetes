@@ -23,7 +23,8 @@ kubectl config get-contexts
 
 
 # switch context to local cluster
-kubectl config use-context docker-for-desktop
+#kubectl config use-context docker-for-desktop
+kubectl config use-context microk8s
 
 
 
@@ -38,7 +39,7 @@ kubectl get nodes
 
 
 # deploy pod
-kubectl run sqlserver --image=mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu `
+kubectl run sqlserver --image=mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu `
 --env ACCEPT_EULA=Y --env SA_PASSWORD=Testing1122
 
 
