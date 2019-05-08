@@ -185,7 +185,7 @@ Can be either dynamic or static
 
 Request for storage by a user<br>
 Request for size and access type<br>
-PVC is attached to a pod
+Pod use the PersistentVolumeClaim as storage
 
 ---?code=assets/code/persistentvolumeclaim.yaml&lang=yaml&title=Persistent Volume yaml file
 
