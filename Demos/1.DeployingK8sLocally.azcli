@@ -3,8 +3,11 @@
 
 
 # get tags
+pwsh
 $repo = invoke-webrequest https://mcr.microsoft.com/v2/mssql/server/tags/list -UseBasicParsing
 $repo.content
+exit
+
 
 
 # check images
@@ -39,7 +42,7 @@ kubectl get nodes
 
 
 # deploy pod
-kubectl run sqlserver --image=mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu `
+kubectl run sqlserver --image=mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu \
 --env ACCEPT_EULA=Y --env SA_PASSWORD=Testing1122
 
 
@@ -55,7 +58,7 @@ kubectl get pods
 
 
 # exec into pod
-kubectl exec -it PODNAME bash
+kubectl exec -it sqlserver-5745f7b4c8-5qhxc bash
 
 
 
@@ -81,7 +84,12 @@ exit
 
 
 # expose service
-kubectl expose deployment sqlserver --type=LoadBalancer --port=1433 --target-port=1433
+kubectl expose deployment sqlserver --type=ClusterIP --port=1433 --target-port=1433
+
+
+
+# get service IP
+kubectl get services
 
 
 
