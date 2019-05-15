@@ -38,7 +38,7 @@ cat storageclass.yaml
 
 
 # deploy to cluster
-kubectl create -f storageclass.yaml
+kubectl apply -f storageclass.yaml
 
 
 
@@ -53,7 +53,7 @@ cat persistentvolumeclaim.yaml
 
 
 # deploy to cluster
-kubectl create -f persistentvolumeclaim.yaml
+kubectl apply -f persistentvolumeclaim.yaml
 
 
 
@@ -93,7 +93,7 @@ cat sqlserver3.yaml
 
 
 # deploy to cluster
-kubectl create -f sqlserver3.yaml
+kubectl apply -f sqlserver3.yaml
 
 
 
