@@ -2,12 +2,6 @@
 
 ---
 
-<p align="center">
-  <img src="assets/images/finland_sponsors.png" />
-</p>
-
----
-
 ## Andrew Pruski
 
 ### SQL Server DBA & Microsoft Data Platform MVP
