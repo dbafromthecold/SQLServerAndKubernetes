@@ -61,8 +61,7 @@ Big Data Clusters
 
 Minikube<br>
 Docker for Desktop<br>
-Minishift<br>
-Micro k8s<br>
+Microk8s<br>
 
 ---
 
