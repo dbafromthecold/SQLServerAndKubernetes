@@ -222,7 +222,7 @@ https://hub.helm.sh/
 
 ## KubeInvaders
 
-<img src="assets/images/KubeInvaders.png" style="float: center"/>
+<img src="assets/images/KubeInvaders_75.png" style="float: center"/>
 
 @size[0.8em](https://github.com/lucky-sideburn/KubeInvaders)
 
