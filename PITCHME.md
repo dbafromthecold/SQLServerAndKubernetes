@@ -224,7 +224,7 @@ https://hub.helm.sh/
 
 <img src="assets/images/KubeInvaders_75.png" style="float: center"/>
 
-@size[0.8em](https://github.com/lucky-sideburn/KubeInvaders)
+
 
 ---
 
@@ -232,6 +232,7 @@ https://hub.helm.sh/
 
 @size[0.8em](http://tinyurl.com/yyz8fe9x/SQLServerAndKubernetes)<br>
 @size[0.8em](http://tinyurl.com/y3x29t3j/summary-of-my-container-series/)
+@size[0.8em](https://github.com/lucky-sideburn/KubeInvaders)
 
 
 <p align="center">
