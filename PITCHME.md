@@ -220,6 +220,14 @@ https://hub.helm.sh/
 
 ---
 
+## KubeInvaders
+
+<img src="assets/images/KubeInvaders.png" style="float: center"/>
+
+@size[0.8em](https://github.com/lucky-sideburn/KubeInvaders)
+
+---
+
 ## Resources
 
 @size[0.8em](http://tinyurl.com/yyz8fe9x/SQLServerAndKubernetes)<br>
