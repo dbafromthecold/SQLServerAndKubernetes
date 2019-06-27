@@ -34,13 +34,13 @@ helm search dbafromthecold/sqlserver2019
 
 
 # perform test deployment from private repo
-helm install --name sqlserver2019 dbafromthecold/sqlserver2019 --version 0.2.4 \
+helm install --name sqlserver2019 dbafromthecold/sqlserver2019 --version 0.3.1 \
 --dry-run --debug
 
 
 
 # deploy
-helm install --name sqlserver2019 dbafromthecold/sqlserver2019 --version 0.2.4
+helm install --name sqlserver2019 dbafromthecold/sqlserver2019 --version 0.3.1
 
 
 
