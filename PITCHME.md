@@ -137,6 +137,8 @@ Different types:- <br>
 - @size[0.9em](External Name)
 @ulend
 
+---
+
 @code[Example yaml file](assets/code/deployment_yaml_file.yaml)
 
 @snap
