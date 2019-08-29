@@ -128,7 +128,7 @@ Holds specifications of containers
 
 An abstraction over a set of pods<br>
 Provides a stable networking endpoint<br>
-Different types: <br>
+Different types:- <br>
 
 @ul
 - @size[0.9em](ClusterIP)<br>
