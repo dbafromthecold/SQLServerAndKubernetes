@@ -224,8 +224,6 @@ https://hub.helm.sh/
 
 <img src="assets/images/KubeInvaders_75.png" style="float: center"/>
 
-
-
 ---
 
 ## Resources
