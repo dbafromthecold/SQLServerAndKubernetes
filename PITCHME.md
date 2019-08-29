@@ -128,12 +128,14 @@ Holds specifications of containers
 
 An abstraction over a set of pods<br>
 Provides a stable networking endpoint<br>
-Different types: -<br>
+Different types: <br>
 
+@ul
 - @size[0.9em](ClusterIP)<br>
 - @size[0.9em](NodePort)<br>
 - @size[0.9em](LoadBalancer)<br>
 - @size[0.9em](External Name)
+@ulend
 
 ---?code=assets/code/deployment_yaml_file.yaml&lang=yaml&title=Example yaml file
 
