@@ -148,7 +148,7 @@ Different types:- <br>
 @[17-21](Setting environment variables)
 @[22-35](Service)
 @[24-25](Metadata)
-@[27-30](Port on service to port on pod)
+@[27-29](Port on service to port on pod)
 @[31-33](External IP address)
 
 ---
