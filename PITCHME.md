@@ -137,8 +137,9 @@ Different types:- <br>
 - @size[0.9em](External Name)
 @ulend
 
----?code=assets/code/deployment_yaml_file.yaml&lang=yaml&title=Example yaml file
+@code[Example yaml file](assets/code/deployment_yaml_file.yaml)
 
+@snap
 @[3-4](Metadata of deployment)
 @[6](Number of replicas)
 @[11-21](Pod declaration)
@@ -148,8 +149,9 @@ Different types:- <br>
 @[17-21](Setting environment variables)
 @[22-33](Service)
 @[24-25](Metadata)
-@[26-31](Port on service to port on pod)
+@[26-30](Port on service to port on pod)
 @[31-33](External IP address)
+@snapend
 
 ---
 
