@@ -19,6 +19,7 @@ spec:
           value: "Testing1122"
         - name: ACCEPT_EULA
           value: "Y"
+---
 apiVersion: v1
   kind: Service
 metadata:
@@ -26,8 +27,8 @@ metadata:
 spec:
   ports:
   - name: sqlserver
-     port: 1433
-     targetPort: 1433
+    port: 1433
+    targetPort: 1433
   selector:
     name: sqlserver
-    type: LoadBalancer
+  type: LoadBalancer

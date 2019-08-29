@@ -139,17 +139,17 @@ Different types:- <br>
 
 ---?code=assets/code/deployment_yaml_file.yaml&lang=yaml&title=Example yaml file
 
-@[3-4](Metadata of deployment)
-@[6](Number of replicas)
-@[11-21](Pod declaration)
-@[13](Pod name)
-@[14](Image to be used)
-@[15-16](Port)
-@[17-21](Setting environment variables)
-@[22-35](Service)
-@[24-25](Metadata)
-@[26-30](Port on service to port on pod)
-@[31-33](External IP address)
+@[4-5](Metadata of deployment)
+@[7](Number of replicas)
+@[12-22](Pod declaration)
+@[14](Pod name)
+@[15](Image to be used)
+@[16-17](Port)
+@[18-22](Setting environment variables)
+@[23-36](Service)
+@[25-26](Metadata)
+@[27-31](Port on service to port on pod)
+@[32-34](External IP address)
 
 ---
 
