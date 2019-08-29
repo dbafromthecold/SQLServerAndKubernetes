@@ -42,7 +42,7 @@ kubectl get nodes
 
 
 # deploy pod
-kubectl run sqlserver --image=mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu \
+kubectl run sqlserver --image=mcr.microsoft.com/mssql/server:2019-RC1-ubuntu \
 --env ACCEPT_EULA=Y --env SA_PASSWORD=Testing1122
 
 
@@ -90,26 +90,6 @@ kubectl expose deployment sqlserver --type=ClusterIP --port=1433 --target-port=1
 
 # get service IP
 kubectl get services
-
-
-
-# deploy dashboard
-kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/aio/deploy/recommended/kubernetes-dashboard.yaml
-
-
-
-# start proxy
-kubectl proxy
-
-
-
-# connect to dashboard
-http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
-
-
-
-# get token
-kubectl -n kube-system describe secret
 
 
 
