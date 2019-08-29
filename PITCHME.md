@@ -193,7 +193,7 @@ Pods reference Persistent Volume Claims
 
 ---?code=assets/code/createsecret.yaml&lang=yaml&title=Creating Kubernetes Secret
 
-@[1](Create Secret)
+@[1-2](Create Secret)
 
 ---?code=assets/code/sqlserver_pvc.yaml&lang=yaml&title=Using Persistent Volume Claims
 
@@ -203,6 +203,10 @@ Pods reference Persistent Volume Claims
 ---
 
 # Demo
+
+---
+
+# A package manager for Kubernetes
 
 ---
 
@@ -217,6 +221,10 @@ https://hub.helm.sh/
 ---
 
 # Demo
+
+---
+
+# Chaos Engineering
 
 ---
 
