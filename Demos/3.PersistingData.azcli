@@ -111,6 +111,11 @@ kubectl get pods
 kubectl describe pods
 
 
+# switch to SQLK8sCluster3 if needed
+# kubectl config use-context SQLK8sCluster3
+
+
+
 # view pods
 kubectl get pods
 
