@@ -77,7 +77,7 @@ kube-shell
 
 ---
 
-# Deploying to a remote cluster
+# Kubernetes components
 
 ---
 

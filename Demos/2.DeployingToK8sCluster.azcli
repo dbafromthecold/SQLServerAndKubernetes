@@ -1,4 +1,4 @@
-# https://dbafromthecold.com/2017/11/15/running-sql-server-in-kubernetes-on-azure-container-services-aks-ii/
+
 
 
 
@@ -38,7 +38,7 @@ cat sqlserver_microK8s.yaml
 
 
 # deploy to cluster
-kubectl apply -f sqlserver2.yaml
+kubectl apply -f sqlserver_microK8s.yaml
 
 
 
@@ -83,3 +83,9 @@ kubectl get pods -o wide
 
 # get service
 kubectl get service
+
+
+
+# clean up
+kubectl delete deployment sqlserver
+kubectl delete service sqlserver

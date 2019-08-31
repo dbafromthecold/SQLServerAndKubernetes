@@ -1,4 +1,7 @@
 
+
+
+
 # navigate to script location
 cd ~/git/SQLServerAndKubernetes/Demos
 
@@ -99,4 +102,9 @@ kubectl get service
 
 
 
-
+# clean up
+kubectl delete deployment sqlserver
+kubectl delete service sqlserver
+kubectl delete secret mssql
+kubectl delete pvc mssql-data
+kubectl delete sc test-sc

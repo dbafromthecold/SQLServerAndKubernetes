@@ -62,3 +62,7 @@ kubectl get pods
 # list services
 kubectl get services
 
+
+
+# clean up
+helm delete sqlserver2019 --purge
