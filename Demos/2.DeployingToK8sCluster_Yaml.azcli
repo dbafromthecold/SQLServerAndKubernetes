@@ -72,7 +72,7 @@ kubectl get pods -o wide
 
 
 # delete pod
-kubectl delete pod sqlserver-7cc867588c-6l97b
+kubectl delete pod PODNAME
 
 
 

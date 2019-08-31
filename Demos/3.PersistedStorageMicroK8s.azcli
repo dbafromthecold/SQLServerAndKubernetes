@@ -42,11 +42,6 @@ kubectl get pvc
 
 
 
-# get more details on persisten volume claim
-kubectl describe pvc
-
-
-
 # view persistent volume 
 kubectl get pv
 
