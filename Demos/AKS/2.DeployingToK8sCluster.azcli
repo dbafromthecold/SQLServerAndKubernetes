@@ -13,7 +13,7 @@ kubectl config current-context
 
 
 # switch context to remote cluster
-kubectl config use-context microk8s
+kubectl config use-context SQLK8sCluster1
 
 
 
@@ -33,7 +33,7 @@ cd ~/git/SQLServerAndKubernetes/Demos/
 
 
 # view sql yaml file
-cat sqlserver_microK8s.yaml
+cat sqlserver2.yaml
 
 
 
