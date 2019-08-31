@@ -12,13 +12,28 @@ kubectl config use-context microk8s
 
 
 
+# view storage class yaml
+cat storageclass_microK8s.yaml
+
+
+
+# create storage class
+kubectl apply -f storageclass_microK8s.yaml
+
+
+
 # view storage class
 kubectl get sc
 
 
 
+# view persistent volume claim yaml
+cat persistentvolumeclaim_microK8s.yaml
+
+
+
 # create persistent volume claim
-kubectl apply -f microK8s_persistentvolumeclaim.yaml
+kubectl apply -f persistentvolumeclaim_microK8s.yaml
 
 
 
@@ -53,7 +68,7 @@ kubectl describe secret mssql
 
 
 # deploy sqlserver
-kubectl apply -f sqlserver_microK8s.yaml
+kubectl apply -f sqlserver_persistentvolume_microK8s.yaml
 
 
 
@@ -104,7 +119,7 @@ kubectl get service
 
 # clean up
 kubectl delete deployment sqlserver
-kubectl delete service sqlserver
+kubectl delete service sqlserver-service
 kubectl delete secret mssql
 kubectl delete pvc mssql-data
 kubectl delete sc test-sc

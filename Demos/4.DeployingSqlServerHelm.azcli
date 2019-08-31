@@ -18,8 +18,7 @@ helm search stable/mssql-linux
 
 
 # perform test deployment
-helm install --name sqlserver stable/mssql-linux \
---dry-run --debug
+helm install --name sqlserver stable/mssql-linux --dry-run --debug
 
 
 
@@ -34,8 +33,7 @@ helm search dbafromthecold/sqlserver2019
 
 
 # perform test deployment from private repo
-helm install --name sqlserver2019 dbafromthecold/sqlserver2019 --version 0.4.0 \
---dry-run --debug
+helm install --name sqlserver2019 dbafromthecold/sqlserver2019 --version 0.4.0 --dry-run --debug
 
 
 
