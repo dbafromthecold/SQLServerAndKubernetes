@@ -2,17 +2,12 @@
 
 
 
-# list contexts
-kubectl config get-contexts
-
-
-
-# get current context
+# confirm kubectl context
 kubectl config current-context
 
 
 
-# switch context to remote cluster
+# switch context to local cluster
 kubectl config use-context SQLK8sCluster2
 
 

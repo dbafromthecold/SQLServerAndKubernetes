@@ -1,14 +1,19 @@
+# https://dbafromthecold.com/2018/01/24/configuring-persistent-storage-for-sql-in-aks/
 
+
+
+# confirm kubectl context
+kubectl config current-context
+
+
+
+# switch context to local cluster
+kubectl config use-context microk8s
 
 
 
 # navigate to script location
 cd ~/git/SQLServerAndKubernetes/Demos
-
-
-
-# set context to microK8s
-kubectl config use-context microk8s
 
 
 

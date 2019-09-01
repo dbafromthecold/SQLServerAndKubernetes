@@ -1,4 +1,4 @@
-## https://dbafromthecold.com/2018/02/07/sql-server-in-kubernetes-on-docker-for-windows/
+# https://dbafromthecold.com/2018/02/07/sql-server-in-kubernetes-on-docker-for-windows/
 
 
 
@@ -20,19 +20,8 @@ kubectl config current-context
 
 
 
-# list contexts
-kubectl config get-contexts
-
-
-
 # switch context to local cluster
-#kubectl config use-context docker-for-desktop
 kubectl config use-context microk8s
-
-
-
-# confirm kubectl context
-kubectl config current-context
 
 
 
