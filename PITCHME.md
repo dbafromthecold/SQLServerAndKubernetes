@@ -141,15 +141,15 @@ Different types:- <br>
 
 @[3-4](Metadata of deployment)
 @[6](Number of replicas)
-@[11-21](Pod declaration)
-@[13](Pod name)
-@[14](Image to be used)
-@[15-16](Port)
-@[17-21](Setting environment variables)
-@[22-33](Service)
-@[24-25](Metadata)
-@[26-30](Port on service to port on pod)
-@[31-33](External IP address)
+@[14-24](Pod declaration)
+@[16](Container name)
+@[17](Image to be used)
+@[18-19](Port)
+@[20-24](Setting environment variables)
+@[25-36](Service)
+@[27-28](Metadata)
+@[30-33](Port on service to port on pod)
+@[34-36](External IP address)
 
 ---
 
@@ -197,8 +197,8 @@ Pods reference Persistent Volume Claims
 
 ---?code=assets/code/sqlserver_pvc.yaml&lang=yaml&title=Using Persistent Volume Claims
 
-@[20-24](Referencing secret storing SA PASSWORD)
-@[25-31](Reference to PVC)
+@[24-27](Referencing secret storing SA PASSWORD)
+@[28-34](Reference to PVC)
 
 ---
 

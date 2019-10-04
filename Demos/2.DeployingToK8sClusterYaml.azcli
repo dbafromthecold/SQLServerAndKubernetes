@@ -57,7 +57,8 @@ kubectl get pods -o wide
 
 
 # delete pod
-kubectl delete pod PODNAME
+PODNAME=$(kubectl get pods --no-headers -o custom-columns=":metadata.name")
+kubectl delete pod $PODNAME
 
 
 

@@ -1,13 +1,16 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sqlserver
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      name: sqlserver
   template:
     metadata:
       labels:
-        app: mssql
+        name: sqlserver
     spec:
       containers:
       - name: sqlserver
@@ -36,7 +39,7 @@ metadata:
   name: sqlserver-service
 spec:
   selector:
-    app: mssql
+    name: sqlserver
   ports:
     - protocol: TCP
       port: 1433

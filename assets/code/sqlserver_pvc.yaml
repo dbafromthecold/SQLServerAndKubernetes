@@ -1,16 +1,19 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sqlserver2
+  name: sqlserver
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      name: sqlserver
   template:
     metadata:
       labels:
-        app: mssql
+        name: sqlserver
     spec:
       containers:
-      - name: sqlserver2
+      - name: sqlserver
         image: mcr.microsoft.com/mssql/server:2019-RC1-ubuntu
         ports:
         - containerPort: 1433
