@@ -1,6 +1,10 @@
 # https://dbafromthecold.com/2019/01/16/deploying-sql-server-to-kubernetes-using-helm/
 
 
+# switch context
+kubectl config use-context SQLK8sCluster2
+
+
 
 # install tiller on cluster
 helm init

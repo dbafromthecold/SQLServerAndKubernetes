@@ -2,10 +2,6 @@
 
 ---
 
-<img src="assets/images/DataHollandSponsors.png"/>
-
----
-
 ## Andrew Pruski
 
 ### SQL Server DBA & Microsoft Data Platform MVP
@@ -203,6 +199,24 @@ Pods reference Persistent Volume Claims
 
 @[24-27](Referencing secret storing SA PASSWORD)
 @[28-34](Reference to PVC)
+
+---
+
+# Demo
+
+---
+
+# A package manager for Kubernetes
+
+---
+
+## Helm
+
+<img src="assets/images/Helm.png" style="float: right"/>
+
+Package manager for Kubernetes<br>
+SQL Server available in the Helm Hub<br>
+https://hub.helm.sh/
 
 ---
 

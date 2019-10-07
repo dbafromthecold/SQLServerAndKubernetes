@@ -13,7 +13,7 @@ kubectl config use-context SQLK8sCluster2
 
 
 # run pods
-kubectl run sqlserver --image=mcr.microsoft.com/mssql/server:2019-RC1-ubuntu \
+kubectl run sqlserver --image=mcr.microsoft.com/mssql/server:2019-RC1-ubuntu --replicas 10 \
 --env ACCEPT_EULA=Y --env SA_PASSWORD=Testing1122 --namespace foobar
 
 
