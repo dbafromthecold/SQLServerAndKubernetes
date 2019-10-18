@@ -68,8 +68,8 @@ Microk8s<br>
 ## Other tools
 
 Visual Studio Code<br>
+Azure Data Studio<br>
 Kubectl<br>
-kube-shell
 
 ---
 

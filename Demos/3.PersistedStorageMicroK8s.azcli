@@ -22,6 +22,8 @@ cat storageclass_microK8s.yaml
 
 
 
+
+
 # create storage class
 kubectl apply -f storageclass_microK8s.yaml
 
