@@ -255,6 +255,4 @@ https://hub.helm.sh/
 
 ---
 
-<img src="assets/images/sqlsatmunich_evaluations.png">
-
----
+<img src="assets/images/sqlsat_munich_evaluations.png">
