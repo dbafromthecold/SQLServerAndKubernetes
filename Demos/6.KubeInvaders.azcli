@@ -27,5 +27,6 @@ kubectl get pods -o wide -n foobar
 kubectl get pods -n foobar --watch
 
 
+
 # clean up
 kubectl delete deployment sqlserver -n foobar

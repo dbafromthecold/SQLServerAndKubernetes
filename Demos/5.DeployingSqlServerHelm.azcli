@@ -66,5 +66,15 @@ kubectl get services
 
 
 
+# describe service
+kubectl describe service sqlserver2019
+
+
+
+# list service
+kubectl get services
+
+
+
 # clean up
 helm delete sqlserver2019 --purge
