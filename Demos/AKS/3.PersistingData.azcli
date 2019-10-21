@@ -13,7 +13,7 @@ kubectl config current-context
 
 
 # switch context to remote cluster
-kubectl config use-context SQLK8sCluster1
+kubectl config use-context SQLK8sCluster2
 
 
 
@@ -28,7 +28,7 @@ kubectl get nodes
 
 
 # navigate to yaml file
-cd ~/git/SQLServerAndKubernetes/Demos/
+cd ~/git/SQLServerAndKubernetes/AKS/Demos/
 
 
 
@@ -93,7 +93,7 @@ cat sqlserver3.yaml
 
 
 # deploy to cluster
-kubectl apply -f sqlserver3.yaml
+kubectl apply -f sqlserver4.yaml
 
 
 
