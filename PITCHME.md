@@ -2,10 +2,6 @@
 
 ---
 
-<img src="assets/images/sqlsatmunich_sponsors.png">
-
----
-
 ## Andrew Pruski
 
 ### SQL Server DBA & Microsoft Data Platform MVP
@@ -252,7 +248,3 @@ https://hub.helm.sh/
 <p align="center">
   <img src="assets/images/SqlServerAndKubernetesQr.png" />
 </p>
-
----
-
-<img src="assets/images/sqlsat_munich_evaluations.png">
