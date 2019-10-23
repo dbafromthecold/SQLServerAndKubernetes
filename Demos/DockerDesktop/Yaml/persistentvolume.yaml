@@ -12,4 +12,4 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Delete
   hostPath:
-    path: "/C/Temp"
+    path: "/C/Temp/persisted_data"

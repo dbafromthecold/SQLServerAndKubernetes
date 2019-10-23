@@ -34,6 +34,11 @@ kubectl get sc
 
 
 
+# view persistent volume yaml
+Get-Content persistentvolume.yaml
+
+
+
 # create persistent volume
 kubectl apply -f persistentvolume.yaml
 
@@ -135,4 +140,5 @@ kubectl delete deployment sqlserver
 kubectl delete service sqlserver-service
 kubectl delete secret mssql
 kubectl delete pvc mssql-data
+kubectl delete pv pv-1
 kubectl delete sc test-sc
