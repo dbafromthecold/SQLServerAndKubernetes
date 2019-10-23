@@ -8,22 +8,21 @@ kubectl config current-context
 
 
 # switch context to local cluster
-kubectl config use-context microk8s
+kubectl config use-context docker-desktop
 
 
 
 # navigate to script location
-cd ~/git/SQLServerAndKubernetes/Demos/
-
+Set-Location C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\DockerDesktop\Yaml
 
 
 # view sql yaml file
-cat sqlserver_microK8s.yaml
+Get-Content sqlserver.yaml
 
 
 
 # deploy to cluster
-kubectl apply -f sqlserver_microK8s.yaml
+kubectl apply -f sqlserver.yaml
 
 
 
@@ -57,7 +56,7 @@ kubectl get pods -o wide
 
 
 # delete pod
-PODNAME=$(kubectl get pods --no-headers -o custom-columns=":metadata.name")
+$PODNAME=$(kubectl get pods --no-headers -o custom-columns=":metadata.name")
 kubectl delete pod $PODNAME
 
 

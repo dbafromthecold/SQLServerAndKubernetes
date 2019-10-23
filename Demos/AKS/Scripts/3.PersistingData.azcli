@@ -28,7 +28,7 @@ kubectl get nodes
 
 
 # navigate to yaml file
-cd ~/git/SQLServerAndKubernetes/AKS/Demos/
+cd ~/git/SQLServerAndKubernetes/Demos/AKS/Yaml
 
 
 
@@ -109,10 +109,6 @@ kubectl get pods
 
 # describe pods
 kubectl describe pods
-
-
-# switch to SQLK8sCluster3 if needed
-# kubectl config use-context SQLK8sCluster3
 
 
 

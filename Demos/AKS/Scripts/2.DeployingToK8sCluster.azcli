@@ -28,7 +28,7 @@ kubectl get nodes
 
 
 # navigate to yaml file
-cd ~/git/SQLServerAndKubernetes/Demos/
+cd ~/git/SQLServerAndKubernetes/Demos/AKS/Yaml
 
 
 

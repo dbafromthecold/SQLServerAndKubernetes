@@ -13,7 +13,7 @@ kubectl config use-context microk8s
 
 
 # navigate to script location
-cd ~/git/SQLServerAndKubernetes/Demos/
+cd ~/git/SQLServerAndKubernetes/Demos/MicroK8s/Yaml
 
 
 
