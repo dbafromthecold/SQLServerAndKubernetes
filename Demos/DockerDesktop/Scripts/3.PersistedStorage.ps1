@@ -22,8 +22,6 @@ Get-Content storageclass.yaml
 
 
 
-
-
 # create storage class
 kubectl apply -f storageclass.yaml
 
@@ -31,21 +29,6 @@ kubectl apply -f storageclass.yaml
 
 # view storage class
 kubectl get sc
-
-
-
-# view persistent volume yaml
-Get-Content persistentvolume.yaml
-
-
-
-# create persistent volume
-kubectl apply -f persistentvolume.yaml
-
-
-
-# view persistent volume
-kubectl get pv
 
 
 
@@ -66,6 +49,11 @@ kubectl get pvc
 
 # view persistent volume 
 kubectl get pv
+
+
+
+# describe persistent volume 
+kubectl describe pv
 
 
 
@@ -140,5 +128,4 @@ kubectl delete deployment sqlserver
 kubectl delete service sqlserver-service
 kubectl delete secret mssql
 kubectl delete pvc mssql-data
-kubectl delete pv pv-1
 kubectl delete sc test-sc
