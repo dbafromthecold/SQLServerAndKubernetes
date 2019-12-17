@@ -149,8 +149,8 @@ Different types:- <br>
 @[25-36](Service)
 @[27-28](Metadata)
 @[30-33](Port on service to port on pod)
-@[34-36](External IP address)
-
+@[34-35](Map service to pod)
+@[36](External IP address)
 ---
 
 # Demo
