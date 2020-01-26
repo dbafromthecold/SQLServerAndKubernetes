@@ -17,12 +17,12 @@ helm version
 
 
 # search for Sql Server chart
-helm search stable/mssql-linux
+helm search repo stable/mssql-linux
 
 
 
 # perform test deployment
-helm install --name sqlserver stable/mssql-linux --dry-run --debug
+helm install sqlserver stable/mssql-linux --dry-run --debug
 
 
 
@@ -32,17 +32,17 @@ helm repo list
 
 
 # search for chart in private repo
-helm search dbafromthecold/sqlserver2019rc1
+helm search repo dbafromthecold/sqlserver2019rc1
 
 
 
 # perform test deployment from private repo
-helm install --name sqlserver2019 dbafromthecold/sqlserver2019Rc1 --version 0.1.0 --dry-run --debug
+helm install sqlserver2019 dbafromthecold/sqlserver2019Rc1 --version 0.1.0 --dry-run --debug
 
 
 
 # deploy
-helm install --name sqlserver2019 dbafromthecold/sqlserver2019Rc1 --version 0.1.0
+helm install sqlserver2019 dbafromthecold/sqlserver2019Rc1 --version 0.1.0
 
 
 
@@ -77,4 +77,4 @@ kubectl get services
 
 
 # clean up
-helm delete sqlserver2019 --purge
+helm delete sqlserver2019
