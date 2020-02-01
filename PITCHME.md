@@ -2,6 +2,10 @@
 
 ---
 
+<img src="assets/images/SQLSatEdinburghSponsors.png"/>
+
+---
+
 ## Andrew Pruski
 
 ### SQL Server DBA & Microsoft Data Platform MVP
