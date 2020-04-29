@@ -4,7 +4,7 @@
 
 ## Andrew Pruski
 
-### SQL Server DBA & Microsoft Data Platform MVP 1
+### SQL Server DBA & Microsoft Data Platform MVP
 
 @fa[twitter] @dbafromthecold <br>
 @fa[envelope] dbafromthecold@gmail.com <br>
