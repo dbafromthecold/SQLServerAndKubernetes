@@ -1,12 +1,12 @@
-<img src="assets/images/grouby_slide1.png">
+<img src="assets/images/groupby_slide1.png">
 
 ---
 
-<img src="assets/images/grouby_slide2.png">
+<img src="assets/images/groupby_slide2.png">
 
 ---
 
-<img src="assets/images/grouby_slide3.png">
+<img src="assets/images/groupby_slide3.png">
 
 ---
 
