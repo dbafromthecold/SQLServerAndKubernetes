@@ -1,12 +1,15 @@
-<img src="assets/images/groupby_slide1.png">
+# SQL Server & Kubernetes
 
 ---
 
-<img src="assets/images/groupby_slide2.png">
+## Andrew Pruski
 
----
+### SQL Server DBA & Microsoft Data Platform MVP
 
-<img src="assets/images/groupby_slide3.png">
+@fa[twitter] @dbafromthecold <br>
+@fa[envelope] dbafromthecold@gmail.com <br>
+@fa[wordpress] www.dbafromthecold.com <br>
+@fa[github] github.com/dbafromthecold
 
 ---
 
