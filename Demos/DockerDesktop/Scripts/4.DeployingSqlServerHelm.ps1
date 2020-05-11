@@ -2,12 +2,7 @@
 
 
 # switch context
-kubectl config use-context SQLK8sCluster2
-
-
-
-# install tiller on cluster
-helm init
+kubectl config use-context docker-desktop
 
 
 
