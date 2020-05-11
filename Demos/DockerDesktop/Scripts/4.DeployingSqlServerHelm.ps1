@@ -32,17 +32,17 @@ helm repo list
 
 
 # search for chart in private repo
-helm search repo dbafromthecold/sqlserver2019rc1
+helm search repo dbafromthecold/sqlserver2019cu4
 
 
 
 # perform test deployment from private repo
-helm install sqlserver2019 dbafromthecold/sqlserver2019Rc1 --version 0.1.0 --dry-run --debug
+helm install sqlserver2019 dbafromthecold/sqlserver2019cu4 --version 0.1.0 --dry-run --debug
 
 
 
 # deploy
-helm install sqlserver2019 dbafromthecold/sqlserver2019Rc1 --version 0.1.0
+helm install sqlserver2019 dbafromthecold/sqlserver2019cu4 --version 0.1.0
 
 
 
