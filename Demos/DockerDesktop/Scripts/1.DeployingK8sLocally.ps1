@@ -30,8 +30,8 @@ kubectl get nodes
 
 # deploy pod
 kubectl run sqlserver `
---image=mcr.microsoft.com/mssql/rhel/server:2019-CU4-ubuntu-16.04 `
---env ACCEPT_EULA=Y --env SA_PASSWORD=Testing1122
+--image=mcr.microsoft.com/mssql/server:2019-CU4-ubuntu-16.04 `
+--env ACCEPT_EULA=Y --env MSSQL_SA_PASSWORD=Testing1122
 
 
 

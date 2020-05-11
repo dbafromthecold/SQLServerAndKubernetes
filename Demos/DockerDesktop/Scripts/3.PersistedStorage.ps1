@@ -13,7 +13,7 @@ kubectl config use-context docker-desktop
 
 
 # navigate to script location
-Set-Location C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\DockerDesktop\Yaml
+Set-Location C:\git\SQLServerAndKubernetes\Demos\DockerDesktop\Yaml
 
 
 
@@ -69,6 +69,11 @@ kubectl get secrets
 
 # describe secret
 kubectl describe secret mssql
+
+
+
+# view sqlserver_persistentvolume.yaml file
+Get-Content sqlserver_persistentvolume.yaml
 
 
 
