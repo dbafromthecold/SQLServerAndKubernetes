@@ -1,4 +1,4 @@
-# SQL Server & Kubernetes
+<src="assets/images/groupbyslide1_rsz.png" />
 
 ---
 
