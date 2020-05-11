@@ -183,7 +183,7 @@ Request for storage by a user<br>
 Request for size and access type<br>
 Pods reference Persistent Volume Claims
 
----?code=assets/code/persistentvolumeclaim.yaml&lang=yaml&title=Persistent Volume yaml file
+---?code=assets/code/persistentvolumeclaim.yaml&lang=yaml&title=Persistent Volume Claim yaml file
 
 @[1-8](Create storage class)
 @[10-20](Define persistent volume claim)
