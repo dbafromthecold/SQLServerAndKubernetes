@@ -82,6 +82,11 @@ kubectl get services
 
 
 
+# connect via mssql-cli
+mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT @@VERSION AS [Version];"
+
+
+
 # clean up
 kubectl delete deployment sqlserver
 kubectl delete service sqlserver

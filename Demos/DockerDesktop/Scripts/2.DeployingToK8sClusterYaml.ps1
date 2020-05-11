@@ -51,6 +51,21 @@ kubectl get service
 
 
 
+# connect via mssql-cli
+mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT @@VERSION AS [Version];"
+
+
+
+# create a database
+mssql-cli -S localhost -U sa -P Testing1122 -Q "CREATE DATABASE [testdatabase];"
+
+
+
+# view databases
+mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT [name] FROM sys.databases;"
+
+
+
 # get pods
 kubectl get pods -o wide
 
