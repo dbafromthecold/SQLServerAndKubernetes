@@ -1,4 +1,4 @@
-<src="assets/images/groupbyslide1_rsz.png" />
+<img src="assets/images/groupbyslide1_rsz.png" />
 
 ---
 
