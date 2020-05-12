@@ -66,8 +66,9 @@ k3s
 ## Other tools
 
 Visual Studio Code<br>
-Azure Data Studio<br>
+Azure Data Studio/SSMS<br>
 Kubectl<br>
+mssql-cli
 
 ---
 
