@@ -86,6 +86,11 @@ kubectl get service
 
 
 
+# view databases
+mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT [name] FROM sys.databases;"
+
+
+
 # clean up
 kubectl delete deployment sqlserver
 kubectl delete service sqlserver-service
