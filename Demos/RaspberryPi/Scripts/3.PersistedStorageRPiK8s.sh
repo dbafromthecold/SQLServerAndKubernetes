@@ -13,34 +13,32 @@ kubectl config use-context microk8s
 
 
 # navigate to script location
-cd ~/git/SQLServerAndKubernetes/Demos/MicroK8s/Yaml
+cd ~/git/SQLServerAndKubernetes/Demos/RaspberryPi/Yaml
 
 
 
-# view storage class yaml
-cat storageclass_microK8s.yaml
+# view persistent volume yaml
+cat persistentvolume_raspberrypi.yaml
 
 
 
-
-
-# create storage class
-kubectl apply -f storageclass_microK8s.yaml
+# create persistent volume
+kubectl apply -f persistentvolume_raspberrypi.yaml
 
 
 
-# view storage class
-kubectl get sc
+# view persistent volume
+kubectl get pv
 
 
 
 # view persistent volume claim yaml
-cat persistentvolumeclaim_microK8s.yaml
+cat persistentvolumeclaim_raspberrypi.yaml
 
 
 
 # create persistent volume claim
-kubectl apply -f persistentvolumeclaim_microK8s.yaml
+kubectl apply -f persistentvolumeclaim_raspberrypi.yaml
 
 
 
@@ -70,7 +68,7 @@ kubectl describe secret mssql
 
 
 # deploy sqlserver
-kubectl apply -f sqlserver_persistentvolume_microK8s.yaml
+kubectl apply -f sqlserver_edge_persistent.yaml
 
 
 
@@ -124,5 +122,5 @@ kubectl get service
 kubectl delete deployment sqlserver
 kubectl delete service sqlserver-service
 kubectl delete secret mssql
-kubectl delete pvc mssql-data
-kubectl delete sc test-sc
+kubectl delete pvc sqlsystem-demo-pvc
+kubectl delete pv sqlsystem-demo-pv

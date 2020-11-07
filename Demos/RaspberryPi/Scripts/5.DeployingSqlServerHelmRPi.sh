@@ -1,6 +1,12 @@
 # https://dbafromthecold.com/2019/01/16/deploying-sql-server-to-kubernetes-using-helm/
 
 
+##########################################################################################
+#
+# This script needs to be updated to deploy Azure SQL Edge via Helm
+#
+##########################################################################################
+
 # switch context
 kubectl config use-context microk8s
 

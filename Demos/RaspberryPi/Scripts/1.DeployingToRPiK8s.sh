@@ -21,7 +21,7 @@ kubectl config current-context
 
 
 # switch context to local cluster
-kubectl config use-context microk8s
+kubectl config use-context kubernetes-admin@kubernetes
 
 
 
@@ -32,14 +32,9 @@ kubectl get nodes
 
 # deploy pod
 kubectl run sqlserver \
---image=mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8 \
+--image=mcr.microsoft.com/azure-sql-edge:latest \
 --env ACCEPT_EULA=Y --env SA_PASSWORD=Testing1122
-
-
-
-# view deployment
-kubectl get deployments
-
+ 
 
 
 # view pod
@@ -49,33 +44,22 @@ kubectl get pods
 
 # exec into pod
 PODNAME=$(kubectl get pods --no-headers -o custom-columns=":metadata.name")
-kubectl exec -it $PODNAME bash
+kubectl exec -it $PODNAME -- /bin/bash
 
 
 
-# navigate to sqlcmd
-cd /opt/mssql-tools/bin/
+# view processes
+ps aux
 
 
 
-# connect to sql
-./sqlcmd -S . -U sa -P Testing1122
-
-
-
-# confirm sql version
-SELECT @@VERSION;
-GO
-
-
-
-# exit SQL and pod
+# exit pod
 exit
 
 
 
 # expose service
-kubectl expose deployment sqlserver --type=ClusterIP --port=1433 --target-port=1433
+kubectl expose pod sqlserver --type=LoadBalancer --port=1433 --target-port=1433
 
 
 
@@ -84,6 +68,11 @@ kubectl get services
 
 
 
+# confirm SQL Server version
+mssql-cli -S 192.168.1.103 -U sa -P Testing1122 -Q "SELECT @@VERSION AS [Version];"
+
+
+
 # clean up
-kubectl delete deployment sqlserver
+kubectl delete pod sqlserver
 kubectl delete service sqlserver

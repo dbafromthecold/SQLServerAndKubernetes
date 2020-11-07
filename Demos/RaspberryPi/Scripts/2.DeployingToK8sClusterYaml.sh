@@ -8,22 +8,22 @@ kubectl config current-context
 
 
 # switch context to local cluster
-kubectl config use-context microk8s
+kubectl config use-context kubernetes-admin@kubernetes
 
 
 
 # navigate to script location
-cd ~/git/SQLServerAndKubernetes/Demos/MicroK8s/Yaml
+cd ~/git/SQLServerAndKubernetes/Demos/RaspberryPi/Yaml
 
 
 
 # view sql yaml file
-cat sqlserver_microK8s.yaml
+cat sqlserver_edge.yaml
 
 
 
 # deploy to cluster
-kubectl apply -f sqlserver_microK8s.yaml
+kubectl apply -f sqlserver_edge.yaml
 
 
 
