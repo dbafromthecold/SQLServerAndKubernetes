@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sqlserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: sqlserver
+  template:
+    metadata:
+      labels:
+        name: sqlserver
+    spec:
+      containers:
+      - name: sqlserver1
+        image: mcr.microsoft.com/azure-sql-edge:latest
+        ports:
+        - containerPort: 1433
+        env:
+          - name: MSSQL_PID
+            value: "Developer"
+          - name: ACCEPT_EULA
+            value: "Y"
+          - name: SA_PASSWORD
+            value: "Testing1122"
+          - name: MSSQL_AGENT_ENABLED
+            value: "TRUE"
+          - name: MSSQL_COLLATION
+            value: "SQL_Latin1_General_CP1_CI_AS"
+          - name: MSSQL_LCID
+            value: "1033"
+      terminationGracePeriodSeconds: 30
+      securityContext:
+        fsGroup: 10001
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sqlserver-service
+spec:
+  ports:
+  - name: sqlserver
+    port: 1433
+    targetPort: 1433
+  selector:
+    name: sqlserver
+  type: ClusterIP

@@ -1,0 +1,61 @@
+# 
+
+
+
+# confirm kubectl context
+kubectl config current-context
+
+
+
+# switch context to local cluster
+kubectl config use-context microk8s
+
+
+
+# navigate to script location
+cd ~/git/SQLServerAndKubernetes/Demos/MicroK8s/Yaml
+
+
+
+# deploy sql server
+kubectl apply -f sqlserver_olderversion_microK8s.yaml
+
+
+
+# confirm deployment
+kubectl get deployment
+
+
+
+# view pod
+kubectl get pods
+
+
+
+# view service
+kubectl get service
+
+
+
+# upgrade sqlserver
+kubectl apply -f sqlserver_microK8s.yaml
+
+
+
+# view deployment
+kubectl get deployments
+
+
+
+# view history
+kubectl rollout history deployment sqlserver
+
+
+
+# rollback
+kubectl rollout undo deployment sqlserver
+
+
+
+# view deployment
+kubectl get deployments

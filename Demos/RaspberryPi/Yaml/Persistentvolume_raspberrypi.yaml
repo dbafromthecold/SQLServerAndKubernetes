@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: sqlsystem-pv
+spec:
+  capacity:
+    storage: 1024Mi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: pi-nfs-server
+    path: "/mnt/sqlsystem"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: sqldata-pv
+spec:
+  capacity:
+    storage: 1024Mi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: pi-nfs-server
+    path: "/mnt/sqldata"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: sqllog-pv
+spec:
+  capacity:
+    storage: 1024Mi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: pi-nfs-server
+    path: "/mnt/sqllog"
