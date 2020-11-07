@@ -83,9 +83,9 @@ mssql-cli
 
 ---
 
-## Master
+## Control node
 
-<img src="assets/images/master-128.png" style="float: right"/>
+<img src="assets/images/control-128.png" style="float: right"/>
 
 Components for controlling the cluster<br>
 
@@ -99,7 +99,7 @@ Components for controlling the cluster<br>
 
 ---
 
-## Nodes
+## Worker Nodes
 
 <img src="assets/images/node-128.png" style="float: right"/>
 
@@ -115,7 +115,7 @@ Running and maintaining pods<br>
 
 ## Pods
 
-<img src="assets/images/master-128.png" style="float: right"/>
+<img src="assets/images/control-128.png" style="float: right"/>
 
 Smallest deployable units of computing<br>
 Group of one or more containers<br>
