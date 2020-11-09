@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sqlserver
+  name: azuresqledge
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: sqlserver
+      name: azuresqledge
   template:
     metadata:
       labels:
-        name: sqlserver
+        name: azuresqledge
     spec:
       volumes:
         - name: sqlsystem
           persistentVolumeClaim:
             claimName: sqlsystem-demo-pvc
       containers:
-        - name: sqlserver1
+        - name: azuresqledge1
           image: mcr.microsoft.com/azure-sql-edge:latest
           ports:
             - containerPort: 1433
@@ -47,13 +47,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: sqlserver-service
+  name: azuresqledge-service
+  labels:
+    app: azuresqledge
 spec:
   ports:
-  - name: sqlserver
+  - name: azuresqledge
     port: 1433
     targetPort: 1433
   selector:
-    name: sqlserver
+    name: azuresqledge
   type: LoadBalancer
         

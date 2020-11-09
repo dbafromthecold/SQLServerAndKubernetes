@@ -2,16 +2,18 @@
 
 
 
-# get tags
-pwsh
-$repo = invoke-webrequest https://mcr.microsoft.com/v2/mssql/server/tags/list -UseBasicParsing
-$repo.content
-exit
+# get tags for SQL Server
+(invoke-webrequest https://mcr.microsoft.com/v2/mssql/server/tags/list -UseBasicParsing).content
 
 
 
-# check images
-docker images
+# get tags for Azure SQL Edge
+(invoke-webrequest https://mcr.microsoft.com/v2/azure-sql-edge/tags/list -UseBasicParsing).content
+
+
+
+# switch to WSL 2
+ubuntu
 
 
 
@@ -21,7 +23,7 @@ kubectl config current-context
 
 
 # switch context to local cluster
-kubectl config use-context kubernetes-admin@kubernetes
+kubectl config use-context raspberrypik8s
 
 
 
@@ -31,7 +33,7 @@ kubectl get nodes
 
 
 # deploy pod
-kubectl run sqlserver \
+kubectl run azuresqledge \
 --image=mcr.microsoft.com/azure-sql-edge:latest \
 --env ACCEPT_EULA=Y --env SA_PASSWORD=Testing1122
  
@@ -42,37 +44,32 @@ kubectl get pods
 
 
 
-# exec into pod
+# check sql is running
 PODNAME=$(kubectl get pods --no-headers -o custom-columns=":metadata.name")
-kubectl exec -it $PODNAME -- /bin/bash
-
-
-
-# view processes
-ps aux
-
-
-
-# exit pod
-exit
+kubectl exec -it $PODNAME -- ps aux
 
 
 
 # expose service
-kubectl expose pod sqlserver --type=LoadBalancer --port=1433 --target-port=1433
+kubectl expose pod azuresqledge -l app=azuresqledge --type=LoadBalancer --port=1433 --target-port=1433
 
 
 
-# get service IP
+# show service
 kubectl get services
 
 
 
+# get service IP
+IP=$(kubectl get services --no-headers -l app=azuresqledge -o custom-columns=":status.loadBalancer.ingress[*].ip") && echo $IP
+
+
+
 # confirm SQL Server version
-mssql-cli -S 192.168.1.103 -U sa -P Testing1122 -Q "SELECT @@VERSION AS [Version];"
+mssql-cli -S $IP -U sa -P Testing1122 -Q "SELECT @@VERSION AS [Version];"
 
 
 
 # clean up
-kubectl delete pod sqlserver
-kubectl delete service sqlserver
+kubectl delete pod azuresqledge
+kubectl delete service azuresqledge

@@ -1,19 +1,9 @@
 # https://dbafromthecold.com/2019/01/16/deploying-sql-server-to-kubernetes-using-helm/
 
 
-##########################################################################################
-#
-# This script needs to be updated to deploy Azure SQL Edge via Helm
-#
-##########################################################################################
 
 # switch context
-kubectl config use-context microk8s
-
-
-
-# install tiller on cluster
-helm init
+kubectl config use-context raspberrypik8s
 
 
 
@@ -37,18 +27,13 @@ helm repo list
 
 
 
-# search for chart in private repo
-helm search repo dbafromthecold/sqlserver2019cu1
-
-
-
 # perform test deployment from private repo
-helm install dbafromthecold/sqlserver2019cu1 --version 0.1.0 --dry-run --debug
+helm install azuresqledge ./azuresqledge --version 0.1.0 --dry-run --debug
 
 
 
 # deploy
-helm install sqlserver2019 dbafromthecold/sqlserver2019 --version 0.1.0
+helm install azuresqledge ./azuresqledge --version 0.1.0
 
 
 
@@ -72,15 +57,5 @@ kubectl get services
 
 
 
-# describe service
-kubectl describe service sqlserver2019
-
-
-
-# list service
-kubectl get services
-
-
-
 # clean up
-helm delete sqlserver2019
+helm delete azuresqledge

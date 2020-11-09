@@ -1,0 +1,6 @@
+A simple Helm chart to test Azure SQL Edge on a Raspberry Pi
+
+No persistent storage is configured
+No resource limits are set for the containers
+
+helm install azuresqledge ./azuresqledge --version 0.1.0

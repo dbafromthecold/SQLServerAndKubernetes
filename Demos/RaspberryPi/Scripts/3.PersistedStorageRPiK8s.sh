@@ -8,12 +8,12 @@ kubectl config current-context
 
 
 # switch context to local cluster
-kubectl config use-context microk8s
+kubectl config use-context raspberrypik8s
 
 
 
 # navigate to script location
-cd ~/git/SQLServerAndKubernetes/Demos/RaspberryPi/Yaml
+cd /mnt/c/git/dbafromthecold/SQLServerAndKubernetes/Demos/RaspberryPi/Yaml
 
 
 
@@ -68,7 +68,7 @@ kubectl describe secret mssql
 
 
 # deploy sqlserver
-kubectl apply -f sqlserver_edge_persistent.yaml
+kubectl apply -f azuresqledge_persistent.yaml
 
 
 
@@ -84,6 +84,26 @@ kubectl get pods
 
 # view service
 kubectl get service
+
+
+
+# get service IP
+IP=$(kubectl get services --no-headers -l app=azuresqledge -o custom-columns=":status.loadBalancer.ingress[*].ip") && echo $IP
+
+
+
+# create database
+mssql-cli -S $IP -U sa -P Testing1122 -Q "CREATE DATABASE [testdatabase];"
+
+
+
+# confirm database
+mssql-cli -S $IP -U sa -P Testing1122 -Q "SELECT [name] FROM sys.databases;"
+
+
+
+# view database files
+mssql-cli -S $IP -U sa -P Testing1122 -Q "USE [testdatabase]; EXEC sp_helpfile;"
 
 
 
@@ -115,6 +135,11 @@ kubectl get pv
 
 # view service
 kubectl get service
+
+
+
+# check database is there
+mssql-cli -S $IP -U sa -P Testing1122 -Q "SELECT [name] FROM sys.databases;"
 
 
 

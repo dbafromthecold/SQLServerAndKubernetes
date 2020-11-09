@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sqlserver
+  name: azuresqledge
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: sqlserver
+      name: azuresqledge
   template:
     metadata:
       labels:
-        name: sqlserver
+        name: azuresqledge
     spec:
       containers:
-      - name: sqlserver1
+      - name: azuresqledge
         image: mcr.microsoft.com/azure-sql-edge:latest
         ports:
         - containerPort: 1433
@@ -33,16 +33,3 @@ spec:
       terminationGracePeriodSeconds: 30
       securityContext:
         fsGroup: 10001
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: sqlserver-service
-spec:
-  ports:
-  - name: sqlserver
-    port: 1433
-    targetPort: 1433
-  selector:
-    name: sqlserver
-  type: LoadBalancer
