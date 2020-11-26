@@ -46,7 +46,7 @@ kubectl get pods
 
 # check sql is running
 PODNAME=$(kubectl get pods --no-headers -o custom-columns=":metadata.name")
-kubectl exec -it $PODNAME -- ps aux
+kubectl exec -it $PODNAME -- ps -auxw
 
 
 
@@ -71,5 +71,5 @@ mssql-cli -S $IP -U sa -P Testing1122 -Q "SELECT @@VERSION AS [Version];"
 
 
 # clean up
-kubectl delete pod azuresqledge
 kubectl delete service azuresqledge
+kubectl delete pod azuresqledge

@@ -9,17 +9,17 @@ kubectl config current-context
 
 
 # switch context to local cluster
-kubectl config use-context SQLK8sCluster2
+kubectl config use-context SQLK8sCluster1
+
+
+
+# navigate to yaml location
+cd /mnt/c/git/dbafromthecold/SQLServerAndKubernetes/Demos/RaspberryPi/Yaml
 
 
 
 # run pods
-kubectl run sqlserver \
---image=mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8 \
---replicas 10 \
---env ACCEPT_EULA=Y --env SA_PASSWORD=Testing1122 \
---namespace foobar
-
+kubectl apply -f ./kubeinvaders.yaml -n foobar
 
 
 # get pods

@@ -27,6 +27,11 @@ helm repo list
 
 
 
+# navigate to helm package location
+cd /mnt/c/git/dbafromthecold/SQLServerAndKubernetes/Demos/RaspberryPi/Helm
+
+
+
 # perform test deployment from private repo
 helm install azuresqledge ./azuresqledge --version 0.1.0 --dry-run --debug
 

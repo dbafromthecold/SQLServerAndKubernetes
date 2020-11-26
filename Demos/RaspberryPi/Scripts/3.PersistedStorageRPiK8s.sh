@@ -144,8 +144,8 @@ mssql-cli -S $IP -U sa -P Testing1122 -Q "SELECT [name] FROM sys.databases;"
 
 
 # clean up
-kubectl delete deployment sqlserver
-kubectl delete service sqlserver-service
+kubectl delete deployment azuresqledge
+kubectl delete service azuresqledge-service
 kubectl delete secret mssql
 kubectl delete pvc sqlsystem-demo-pvc
 kubectl delete pv sqlsystem-demo-pv
