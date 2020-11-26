@@ -62,7 +62,9 @@ Big Data Clusters
 Minikube<br>
 Docker for Desktop<br>
 Microk8s<br>
-k3s
+k3s<br>
+RaspberryPi
+
 
 ---
 
