@@ -9,4 +9,4 @@ spec:
     - ReadWriteOnce
   nfs:
     server: pi-nfs-server
-    path: "/mnt/sqlsystem-demo-pv"
+    path: "/mnt/nfsshare/sqlsystem"
