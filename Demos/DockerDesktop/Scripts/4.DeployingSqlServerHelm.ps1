@@ -11,33 +11,28 @@ helm version
 
 
 
-# search for Sql Server chart
-helm search repo stable/mssql-linux
-
-
-
-# perform test deployment
-helm install sqlserver stable/mssql-linux --dry-run --debug
-
-
-
 # list helm repos
 helm repo list
 
 
 
-# search for chart in private repo
-helm search repo dbafromthecold/sqlserver2019cu4
+# search for Sql Server chart
+helm search repo stable/mssql-linux
+
+
+
+# navigate to helm package location
+cd C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\DockerDesktop\Helm
 
 
 
 # perform test deployment from private repo
-helm install sqlserver2019 dbafromthecold/sqlserver2019cu4 --version 0.1.0 --dry-run --debug
+helm install sqlserver .\sqlserver --version 0.1.0 --dry-run --debug
 
 
 
 # deploy
-helm install sqlserver2019 dbafromthecold/sqlserver2019cu4 --version 0.1.0
+helm install sqlserver .\sqlserver --version 0.1.0
 
 
 
@@ -62,4 +57,4 @@ kubectl get services
 
 
 # clean up
-helm delete sqlserver2019
+helm delete sqlserver

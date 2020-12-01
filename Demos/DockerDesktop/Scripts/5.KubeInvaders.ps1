@@ -9,16 +9,17 @@ kubectl config current-context
 
 
 # switch context to local cluster
-kubectl config use-context SQLK8sCluster2
+kubectl config use-context SQLK8sCluster1
+
+
+
+# navigate to yaml location
+cd C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\DockerDesktop\Yaml
 
 
 
 # run pods
-kubectl run sqlserver `
---image=mcr.microsoft.com/mssql/server:2019-CU4-ubuntu-16.04 `
---replicas 10 `
---env ACCEPT_EULA=Y --env SA_PASSWORD=Testing1122 `
---namespace foobar
+kubectl apply -f .\kubeinvaders.yaml -n foobar
 
 
 

@@ -13,7 +13,7 @@ kubectl config use-context docker-desktop
 
 
 # navigate to script location
-Set-Location C:\git\SQLServerAndKubernetes\Demos\DockerDesktop\Yaml
+Set-Location C:\git\dbafromthecold\SQLServerAndKubernetes\Demos\DockerDesktop\Yaml
 
 
 
@@ -110,6 +110,9 @@ mssql-cli -S localhost -U sa -P Testing1122 -Q "CREATE DATABASE [testdatabase];"
 # view databases
 mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT [name] FROM sys.databases;"
 
+
+# view database files
+mssql-cli -S localhost -U sa -P Testing1122 -Q "USE [testdatabase]; EXEC sp_helpfile;"
 
 
 # view pods with IP address

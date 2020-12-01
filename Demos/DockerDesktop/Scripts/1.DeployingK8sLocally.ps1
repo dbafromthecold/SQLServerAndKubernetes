@@ -30,13 +30,8 @@ kubectl get nodes
 
 # deploy pod
 kubectl run sqlserver `
---image=mcr.microsoft.com/mssql/server:2019-CU4-ubuntu-16.04 `
+--image=mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04 `
 --env ACCEPT_EULA=Y --env MSSQL_SA_PASSWORD=Testing1122
-
-
-
-# view deployment
-kubectl get deployments
 
 
 
@@ -73,7 +68,7 @@ exit
 
 
 # expose service
-kubectl expose deployment sqlserver --type=LoadBalancer --port=1433 --target-port=1433
+kubectl expose pod sqlserver --type=LoadBalancer --port=1433 --target-port=1433
 
 
 
@@ -88,5 +83,5 @@ mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT @@VERSION AS [Version];"
 
 
 # clean up
-kubectl delete deployment sqlserver
+kubectl delete pod sqlserver
 kubectl delete service sqlserver
