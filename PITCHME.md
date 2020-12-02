@@ -2,6 +2,10 @@
 
 ---
 
+<img src="assets/images/sqlday_sponsors.png"/>
+
+---
+
 ## Andrew Pruski
 
 ### SQL Server DBA, Microsoft Data Platform MVP, & Certified Kubernetes Administrator
