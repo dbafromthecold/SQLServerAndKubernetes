@@ -21,25 +21,25 @@ To give you background knowledge (and code) to get started with Kubernetes
 
 ## What is Kubernetes?
 
-"Kubernetes is a portable, extensible open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available"
+"Kubernetes is a portable, extensible open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available"<br>
 <font size="6"><a href="https://kubernetes.io/">kubernetes.io</a></font>
 
 ---
 
 ## Kubernetes
 
-<img src="assets/images/KubernetesLogo.png" style="float: right"/>
+<img src="images/KubernetesLogo.png" style="float: right"/>
 <!-- .slide: style="text-align: left;"> -->
 <br>
-@size[0.9em](Open source orchestration engine) <br>
-@size[0.9em](Designed by Google) <br>
-@size[0.9em](Hosted by the Cloud Native Computing Foundation) <br>
-@size[0.9em](Kubernetes v1.0 was released on July 21, 2015)
+Open source orchestration engine<br>
+Designed by Google <br>
+Hosted by the Cloud Native Computing Foundation <br>
+Kubernetes v1.0 was released on July 21, 2015
 
 ---
 
 <p align="center">
-  <img src="assets/images/ytho.png" />
+  <img src="images/ytho.png" />
 </p>
 
 ---
@@ -88,7 +88,7 @@ mssql-cli
 
 ## Control node
 <!-- .slide: style="text-align: left;"> -->
-<img src="assets/images/control-128.png" style="float: right"/>
+<img src="images/control-128.png" style="float: right"/>
 
 Components for controlling the cluster<br>
 - kube-apiserver<br>
@@ -101,7 +101,7 @@ Components for controlling the cluster<br>
 
 ## Worker Nodes
 <!-- .slide: style="text-align: left;"> -->
-<img src="assets/images/node-128.png" style="float: right"/>
+<img src="images/node-128.png" style="float: right"/>
 
 Running and maintaining pods<br>
 
@@ -113,7 +113,7 @@ Running and maintaining pods<br>
 
 ## Pods
 <!-- .slide: style="text-align: left;"> -->
-<img src="assets/images/control-128.png" style="float: right"/>
+<img src="images/control-128.png" style="float: right"/>
 
 Smallest deployable units of computing<br>
 Group of one or more containers<br>
@@ -134,9 +134,6 @@ ClusterIP<br>
 NodePort<br>
 LoadBalancer<br>
 External Name
-
-
----?code=assets/code/deployment_yaml_file.yaml&lang=yaml&title=Example yaml file
 
 ---
 
@@ -169,15 +166,15 @@ spec:
 apiVersion: v1
   kind: Service
 metadata:
-  name: sqlserver-service
+  name: sqlserver-service
 spec:
   ports:
-  - name: sqlserver
-    port: 1433
-    targetPort: 1433
+    name: sqlserver
+    port: 1433
+targetPort: 1433
   selector:
     name: sqlserver
-  type: LoadBalancer
+    type: LoadBalancer
 </pre></code>
 
 ---
@@ -199,7 +196,7 @@ Data changes not on a persistent volume will be lost
 
 ## Persistent Volumes
 <!-- .slide: style="text-align: left;"> -->
-<img src="assets/images/pv-128.png" style="float: right"/>
+<img src="images/pv-128.png" style="float: right"/>
 
 Just a piece of storage in the cluster<br>
 Lifecycle independent of the pods<br>
@@ -209,7 +206,7 @@ Can be either dynamic or static
 
 ## Persistent Volume Claims
 <!-- .slide: style="text-align: left;"> -->
-<img src="assets/images/pvc-128.png" style="float: right"/>
+<img src="images/pvc-128.png" style="float: right"/>
 
 Request for storage by a user<br>
 Request for size and access type<br>
@@ -244,8 +241,6 @@ spec:
 ---
 
 ## Create Secret
-
-@[1-2](Create Secret)
 
 <pre><code data-line-numbers="1-2">kubectl create secret generic mssql \
 --from-literal=SA_PASSWORD="Testing1122"</pre></code>
@@ -302,7 +297,7 @@ spec:
 
 ## Helm
 <!-- .slide: style="text-align: left;"> -->
-<img src="assets/images/Helm.png" style="float: right"/>
+<img src="images/Helm.png" style="float: right"/>
 
 Package manager for Kubernetes<br>
 SQL Server available in the Helm Hub<br>
@@ -320,7 +315,7 @@ https://hub.helm.sh/
 
 ## KubeInvaders
 
-<img src="assets/images/KubeInvaders_75.png" style="float: center"/>
+<img src="images/KubeInvaders_75.png" style="float: center"/>
 
 ---
 
@@ -330,11 +325,11 @@ https://hub.helm.sh/
 
 ## Resources
 <!-- .slide: style="text-align: left;"> -->
-<font size="6">(http://tinyurl.com/yyz8fe9x/SQLServerAndKubernetes)<br>
-<(http://tinyurl.com/y3x29t3j/summary-of-my-container-series/)
-(https://github.com/lucky-sideburn/KubeInvaders)</font>
+<font size="6">http://tinyurl.com/yyz8fe9x/SQLServerAndKubernetes<br>
+http://tinyurl.com/y3x29t3j/summary-of-my-container-series/
+https://github.com/lucky-sideburn/KubeInvaders</font>
 
 <p align="center">
-  <img src="assets/images/SqlServerAndKubernetesQr.png" />
+  <img src="images/SqlServerAndKubernetesQr.png" />
 </p>
 
