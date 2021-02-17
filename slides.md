@@ -31,10 +31,12 @@ To give you background knowledge (and code) to get started with Kubernetes
 <img src="images/KubernetesLogo.png" style="float: right"/>
 <!-- .slide: style="text-align: left;"> -->
 <br>
+<font size="6">
 Open source orchestration engine<br>
 Designed by Google <br>
 Hosted by the Cloud Native Computing Foundation <br>
 Kubernetes v1.0 was released on July 21, 2015
+</font>
 
 ---
 
@@ -124,7 +126,7 @@ Holds specifications of containers
 
 ## Services
 <!-- .slide: style="text-align: left;"> -->
-<img src="assets/images/svc-128.png" style="float: right"/>
+<img src="images/svc-128.png" style="float: right"/>
 
 An abstraction over a set of pods<br>
 Provides a stable networking endpoint<br>
