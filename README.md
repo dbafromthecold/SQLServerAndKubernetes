@@ -2,4 +2,4 @@
 
 Code for my SQL Server and Kubernetes presentation
 
-Slides are here:- https://gitpitch.com/dbafromthecold/SQLServerAndKubernetes
+Slides are here:- https://dbafromthecold.github.io/SQLServerAndKubernetes
