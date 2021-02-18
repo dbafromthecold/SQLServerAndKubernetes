@@ -165,7 +165,7 @@ spec:
           value: "Testing1122"
         - name: ACCEPT_EULA
           value: "Y"
-
+---
 apiVersion: v1
   kind: Service
 metadata:
@@ -219,15 +219,15 @@ Pods reference Persistent Volume Claims
 
 ## Creating Persistent Volume Claims
 
-<pre><code data-line-numbers="1-8|10-20">kind: StorageClass
-apiVersion: storage.k8s.io/v1beta1
+<pre><code data-line-numbers="1-8|10-20">apiVersion: storage.k8s.io/v1beta1
+kind: StorageClass
 metadata:
      name: azure-disk
 provisioner: kubernetes.io/azure-disk
 parameters:
   storageaccounttype: Standard_LRS
   kind: Managed
-
+---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
