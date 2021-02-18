@@ -165,7 +165,7 @@ spec:
           value: "Testing1122"
         - name: ACCEPT_EULA
           value: "Y"
-`---
+
 apiVersion: v1
   kind: Service
 metadata:
