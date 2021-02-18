@@ -132,16 +132,16 @@ An abstraction over a set of pods<br>
 Provides a stable networking endpoint<br>
 Different types:- <br>
 
-ClusterIP<br>
-NodePort<br>
-LoadBalancer<br>
-External Name
+- ClusterIP<br>
+- NodePort<br>
+- LoadBalancer<br>
+- External Name
 
 ---
 
 ## Example Yaml File
 
-<pre><code data-line-numbers="3-4|6|14-24|16|17|18-19|20-24|25-36|27-28|30-33|34-35|36">apiVersion: apps/v1
+<pre><code data-line-numbers="3-4|6|14-24|16|17|18-19|20-24|26-37|28-29|31-34|35-36|37">apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sqlserver
@@ -165,6 +165,7 @@ spec:
           value: "Testing1122"
         - name: ACCEPT_EULA
           value: "Y"
+`---
 apiVersion: v1
   kind: Service
 metadata:
@@ -173,7 +174,7 @@ spec:
   ports:
     name: sqlserver
     port: 1433
-targetPort: 1433
+    targetPort: 1433
   selector:
     name: sqlserver
     type: LoadBalancer
