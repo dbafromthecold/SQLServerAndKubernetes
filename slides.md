@@ -31,11 +31,12 @@ To give you background knowledge (and code) to get started with Kubernetes
 <img src="images/KubernetesLogo.png" style="float: right"/>
 <!-- .slide: style="text-align: left;"> -->
 <br>
-- Open source orchestration engine<br>
-- Designed by Google <br>
-- Cloud Native Computing Foundation <br>
-- v1.0 was released on July 21, 2015
-
+<font size=6>
+Open source orchestration engine<br>
+Designed by Google <br>
+Cloud Native Computing Foundation <br>
+v1.0 was released on July 21, 2015
+</font>
 ---
 
 <p align="center">
