@@ -37,6 +37,7 @@ Designed by Google <br>
 Cloud Native Computing Foundation <br>
 v1.0 was released on July 21, 2015
 </font>
+
 ---
 
 <p align="center">
