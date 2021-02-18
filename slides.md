@@ -32,10 +32,10 @@ To give you background knowledge (and code) to get started with Kubernetes
 <!-- .slide: style="text-align: left;"> -->
 <br>
 <font size="6">
-Open source orchestration engine<br>
-Designed by Google <br>
-Hosted by the Cloud Native Computing Foundation <br>
-Kubernetes v1.0 was released on July 21, 2015
+- Open source orchestration engine<br>
+- Designed by Google <br>
+- Cloud Native Computing Foundation <br>
+- v1.0 was released on July 21, 2015
 </font>
 
 ---
