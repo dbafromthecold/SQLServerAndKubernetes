@@ -4,7 +4,11 @@
 
 ## Andrew Pruski
 
-### SQL Server DBA, Microsoft Data Platform MVP, & Certified Kubernetes Administrator
+<img src="images/apruski.jpg" style="float: right"/>
+
+### Field Solutions Architect
+### Microsoft Data Platform MVP 
+
 <!-- .slide: style="text-align: left;"> -->
 <i class="fab fa-twitter"></i><a href="https://twitter.com/dbafromthecold">  @dbafromthecold</a><br>
 <i class="fas fa-envelope"></i>  dbafromthecold@gmail.com<br>
@@ -20,7 +24,7 @@ To give you background knowledge (and code) to get started with Kubernetes
 ---
 
 ## What is Kubernetes?
-
+<!-- .slide: style="text-align: left;"> -->
 "Kubernetes is a portable, extensible open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available"<br>
 <font size="6"><a href="https://kubernetes.io/">kubernetes.io</a></font>
 
@@ -328,9 +332,9 @@ https://hub.helm.sh/
 
 ## Resources
 <!-- .slide: style="text-align: left;"> -->
-<font size="6">http://tinyurl.com/yyz8fe9x/SQLServerAndKubernetes<br>
-http://tinyurl.com/y3x29t3j/summary-of-my-container-series/
-https://github.com/lucky-sideburn/KubeInvaders</font>
+<font size="6">
+<a href="https://github.com/dbafromthecold/SQLServerAndKubernetes">https://github.com/dbafromthecold/SQLServerAndKubernetes</a><br>
+</font>
 
 <p align="center">
   <img src="images/SqlServerAndKubernetesQr.png" />
