@@ -1,0 +1,77 @@
+# https://dbafromthecold.com/2017/11/15/running-sql-server-in-kubernetes-on-azure-container-services-aks-ii/
+
+
+
+# confirm kubectl context
+kubectl config current-context
+
+
+
+# switch context to local cluster
+kubectl config use-context microk8s
+
+
+
+# navigate to script location
+cd ~/git/SQLServerAndKubernetes/Demos/MicroK8s/Yaml
+
+
+
+# view sql yaml file
+cat sqlserver_microK8s.yaml
+
+
+
+# deploy to cluster
+kubectl apply -f sqlserver_microK8s.yaml
+
+
+
+# view deployment
+kubectl get deployments
+
+
+
+# view pods
+kubectl get pods
+
+
+
+# get more info on pods
+kubectl get pods -o wide
+
+
+
+# describe pods
+kubectl describe pods
+
+
+
+# view service
+kubectl get service
+
+
+
+# get pods
+kubectl get pods -o wide
+
+
+# delete pod
+PODNAME=$(kubectl get pods --no-headers -o custom-columns=":metadata.name")
+kubectl delete pod $PODNAME
+
+
+
+# view pods
+kubectl get pods -o wide
+
+
+
+# get service
+kubectl get service
+
+
+
+# clean up
+kubectl delete deployment sqlserver
+kubectl delete service sqlserver-service

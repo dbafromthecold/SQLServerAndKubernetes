@@ -1,0 +1,6 @@
+A simple Helm chart to test SQL Server in Kubernetes
+
+No persistent storage is configured
+No resource limits are set for the containers
+
+helm install sqlserver ./sqlserver --version 0.1.0
