@@ -38,6 +38,11 @@ kubectl get nodes
 
 
 
+# view system pods
+kubectl get pods -n kube-system
+
+
+
 # deploy pod
 kubectl run sqlserver `
 --image=mcr.microsoft.com/mssql/server:2022-CU5-ubuntu-20.04 `
