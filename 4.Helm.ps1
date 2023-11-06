@@ -11,6 +11,7 @@
 ############################################################################
 
 
+
 # switch context
 kubectl config use-context docker-desktop
 
@@ -27,7 +28,7 @@ helm repo list
 
 
 # navigate to helm package location
-cd ...\SQLServerAndKubernetes\Demos\DockerDesktop\Helm
+cd C:\git\SQLServerAndKubernetes\\Helm
 
 
 

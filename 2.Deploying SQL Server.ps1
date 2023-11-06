@@ -23,7 +23,8 @@ kubectl config use-context docker-desktop
 
 
 # navigate to script location
-Set-Location ...\SQLServerAndKubernetes\Demos\DockerDesktop\Yaml
+Set-Location C:\git\SQLServerAndKubernetes\yaml
+
 
 
 # view sql yaml file

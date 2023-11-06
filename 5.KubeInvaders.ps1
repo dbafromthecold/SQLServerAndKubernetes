@@ -19,12 +19,12 @@ kubectl config current-context
 
 
 # switch context to local cluster
-kubectl config use-context SQLK8sCluster1
+kubectl config use-context kubeinvaders1
 
 
 
 # navigate to yaml location
-cd ...\SQLServerAndKubernetes\Demos\DockerDesktop\Yaml
+cd C:\git\SQLServerAndKubernetes\yaml
 
 
 
