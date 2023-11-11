@@ -48,7 +48,7 @@ kubectl get deployments
 
 
 # list storage
-kubectl get pv; kubectl get pvc
+kubectl get sc; kubectl get pv; kubectl get pvc
 
 
 

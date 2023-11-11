@@ -68,7 +68,7 @@ kubectl describe pv
 
 
 # create secret
-kubectl create secret generic mssql --from-literal=SA_PASSWORD="Testing1122"
+kubectl create secret generic mssql --from-literal=MSSQL_SA_PASSWORD="Testing1122"
 
 
 
@@ -79,6 +79,19 @@ kubectl get secrets
 
 # describe secret
 kubectl describe secret mssql
+
+
+
+# try and get more info on secret
+kubectl get secret mssql -o yaml
+
+
+
+# decode secret
+kubectl get secret mssql -o jsonpath='{ .data.MSSQL_SA_PASSWORD }' > C:\temp\passwd
+certutil -decode C:\temp\passwd C:\temp\passwd_decode
+cat C:\temp\passwd_decode
+Remove-Item C:\temp\passwd; Remove-Item C:\temp\passwd_decode
 
 
 

@@ -24,7 +24,7 @@ kubectl config use-context kubeinvaders1
 
 
 # navigate to yaml location
-cd C:\git\SQLServerAndKubernetes\yaml
+Set-Location C:\git\SQLServerAndKubernetes\yaml
 
 
 

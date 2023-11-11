@@ -5,6 +5,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
+  storageClassName: test-sc
   resources:
     requests:
       storage: 1Gi
