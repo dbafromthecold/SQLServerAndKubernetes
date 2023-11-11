@@ -28,7 +28,7 @@ helm repo list
 
 
 # navigate to helm package location
-cd C:\git\SQLServerAndKubernetes\\Helm
+Set-Location C:\git\SQLServerAndKubernetes\Helm
 
 
 
@@ -52,6 +52,11 @@ kubectl get deployments
 
 
 
+# list storage
+kubectl get pv; kubectl get pvc
+
+
+
 # list pods
 kubectl get pods
 
@@ -64,3 +69,70 @@ kubectl get services
 
 # clean up
 helm delete sqlserver
+
+
+
+# package the chart
+helm package ./sqlserver
+
+
+
+# clone repository locally
+git clone https://github.com/dbafromthecold/DemoHelmRepo.git C:\git\DemoHelmRepo
+
+
+
+# move packaged chart to repo
+Move-Item sqlserver-0.1.0.tgz C:\git\DemoHelmRepo
+
+
+
+# navigate to repo
+Set-Location C:\git\DemoHelmRepo
+
+
+
+# index repo
+helm repo index .
+
+
+
+# view index.yaml
+cat index.yaml
+
+
+
+# push chart to Github
+git commit -am "added sqlserver chart to repo"; git push
+
+
+
+# add Githb repo as a Helm repository
+helm repo add testrepo https://raw.githubusercontent.com/dbafromthecold/DemoHelmRepo/main
+
+
+
+# view new Helm repository
+helm repo list
+
+
+
+# search new Helm repository
+helm search repo testrepo/sqlserver
+
+
+
+# deploy chart from repository
+helm install testchart testrepo/sqlserver
+
+
+
+# confirm deployment
+helm list
+
+
+
+# clean up
+helm delete sqlserver
+helm repo remove testrepo
+Set-Location ~; Remove-Item C:\git\DemoHelmRepo -Recurse -Force

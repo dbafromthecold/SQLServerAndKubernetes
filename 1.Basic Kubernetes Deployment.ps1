@@ -12,14 +12,8 @@
 
 
 
-# get tags
-$repo = invoke-webrequest https://mcr.microsoft.com/v2/mssql/server/tags/list -UseBasicParsing
-$repo.content
-
-
-
-# check images
-docker images
+# list contexts
+kubectl config get-contexts
 
 
 
@@ -38,6 +32,11 @@ kubectl get nodes
 
 
 
+# view cluster info
+kubectl cluster-info
+
+
+
 # view system pods
 kubectl get pods -n kube-system
 
@@ -47,6 +46,11 @@ kubectl get pods -n kube-system
 kubectl run sqlserver `
 --image=mcr.microsoft.com/mssql/server:2022-CU5-ubuntu-20.04 `
 --env ACCEPT_EULA=Y --env MSSQL_SA_PASSWORD=Testing1122
+
+
+
+# view cluster events
+kubectl get events --sort-by=.metadata.creationTimestamp
 
 
 
