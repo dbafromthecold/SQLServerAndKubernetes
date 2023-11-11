@@ -22,17 +22,12 @@ helm version
 
 
 
-# list helm repos
-helm repo list
-
-
-
 # navigate to helm package location
 Set-Location C:\git\SQLServerAndKubernetes\Helm
 
 
 
-# perform test deployment from private repo
+# perform test deployment using local chart
 helm install sqlserver .\sqlserver --version 0.1.0 --dry-run --debug
 
 
@@ -62,12 +57,22 @@ kubectl get pods
 
 
 
+# list secret
+kubectl get secrets
+
+
+
 # list services
 kubectl get services
 
 
 
-# clean up
+# connect to sql server
+mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT @@VERSION AS [Version];"
+
+
+
+# delete release
 helm delete sqlserver
 
 
@@ -103,7 +108,9 @@ cat index.yaml
 
 
 # push chart to Github
-git commit -am "added sqlserver chart to repo"; git push
+git add .
+git commit -m "added sqlserver chart to repo"
+git push
 
 
 
@@ -132,7 +139,15 @@ helm list
 
 
 
-# clean up
-helm delete sqlserver
+# clean up demo repo
+Remove-Item index.yaml; Remove-Item sqlserver-0.1.0.tgz
+git add .
+git commit -m "cleaned up repo"
+git push
+
+
+
+# clean up locally
+helm delete testchart
 helm repo remove testrepo
 Set-Location ~; Remove-Item C:\git\DemoHelmRepo -Recurse -Force
