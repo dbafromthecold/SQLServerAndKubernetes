@@ -32,8 +32,8 @@ kubectl get nodes
 
 
 
-# view cluster info
-kubectl cluster-info
+# view info on node
+kubectl describe node docker-desktop
 
 
 
