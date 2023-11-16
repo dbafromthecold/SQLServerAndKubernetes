@@ -12,16 +12,6 @@
 
 
 
-# list contexts
-kubectl config get-contexts
-
-
-
-# confirm kubectl context
-kubectl config current-context
-
-
-
 # switch context to local cluster
 kubectl config use-context docker-desktop
 
@@ -32,25 +22,10 @@ kubectl get nodes
 
 
 
-# view info on node
-kubectl describe node docker-desktop
-
-
-
-# view system pods
-kubectl get pods -n kube-system
-
-
-
 # deploy pod
 kubectl run sqlserver `
 --image=mcr.microsoft.com/mssql/server:2022-CU5-ubuntu-20.04 `
 --env ACCEPT_EULA=Y --env MSSQL_SA_PASSWORD=Testing1122
-
-
-
-# view cluster events
-kubectl get events --sort-by=.metadata.creationTimestamp
 
 
 

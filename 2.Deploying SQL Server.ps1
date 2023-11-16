@@ -22,6 +22,11 @@ kubectl config use-context docker-desktop
 
 
 
+# view system pods
+kubectl get pods -n kube-system
+
+
+
 # navigate to script location
 Set-Location C:\git\SQLServerAndKubernetes\yaml
 
@@ -34,6 +39,11 @@ Get-Content sqlserver.yaml
 
 # deploy to cluster
 kubectl apply -f sqlserver.yaml
+
+
+
+# view cluster events
+kubectl get events --sort-by=.metadata.creationTimestamp
 
 
 

@@ -95,8 +95,7 @@ Remove-Item C:\temp\passwd; Remove-Item C:\temp\passwd_decode
 
 
 
-# view sqlserver_persistentvolume.yaml file
-Get-Content sqlserver_persistentvolume.yaml
+get-content sqlserver_persistentvolume.yaml
 
 
 
