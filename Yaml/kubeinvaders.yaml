@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: sqlserver
 spec:
-  replicas: 1
+  replicas: 10
   selector:
     matchLabels:
       name: sqlserver

@@ -23,6 +23,11 @@ kubectl config use-context kubeinvaders1
 
 
 
+# test connection to cluster
+kubectl get nodes
+
+
+
 # navigate to yaml location
 Set-Location C:\git\SQLServerAndKubernetes\yaml
 
@@ -34,12 +39,12 @@ kubectl apply -f .\kubeinvaders.yaml
 
 
 # get pods
-kubectl get pods -o wide 
+kubectl get pods -o wide
 
 
 
 # watch pods
-kubectl get pods -n foobar --watch
+kubectl get pods --watch
 
 
 
