@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: sqlserver
-        image: mcr.microsoft.com/mssql/server:2022-CU5-ubuntu-20.04
+        image: mcr.microsoft.com/mssql/server:2022-CU6-ubuntu-20.04
         ports:
         - containerPort: 1433
         env:
