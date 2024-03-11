@@ -55,8 +55,7 @@ v1.0 was released on July 21, 2015
 Leading orchestrator<br>
 Easy to deploy and mantain containers<br>
 Quick to spin up containers<br>
-High availability built-in<br>
-Big Data Clusters
+High availability built-in
 
 ---
 
@@ -113,7 +112,7 @@ Running and maintaining pods<br>
 
 - kubelet<br>
 - kube-proxy<br>
-- Docker
+- container runtime
 
 ---
 
