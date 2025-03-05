@@ -143,6 +143,7 @@ Different types:- <br>
 ---
 
 ## Example Yaml File
+<!-- .slide: style="text-align: left;"> -->
 
 <pre><code data-line-numbers="3-4|6|14-24|16|17|18-19|20-24|26-37|28-29|31-34|35-36|37">apiVersion: apps/v1
 kind: Deployment
@@ -221,6 +222,7 @@ Pods reference Persistent Volume Claims
 ---
 
 ## Creating Persistent Volume Claims
+<!-- .slide: style="text-align: left;"> -->
 
 <pre><code data-line-numbers="1-8|10-20">apiVersion: storage.k8s.io/v1beta1
 kind: StorageClass
