@@ -7,9 +7,9 @@
 <img src="images/apruski.jpg" style="float: right"/>
 
 ### Principal Field Solutions Architect
-### Microsoft Data Platform MVP
-### Docker Captain
-### VMware vExpert
+#### Microsoft Data Platform MVP
+#### Docker Captain
+#### VMware vExpert
 
 <!-- .slide: style="text-align: left;"> -->
 <i class="fa-brands fa-bluesky"></i><a href="https://bsky.app/profile/dbafromthecold.com">  @dbafromthecold.com</a><br>
@@ -86,7 +86,7 @@ TDB
 ## Example Statefulset
 <!-- .slide: style="text-align: left;"> -->
 
-<pre><code data-line-numbers="17-18|21|22-24|25-33|34-40|41-47|49-57|52-53|57">apiVersion: apps/v1
+<pre><code data-line-numbers="*|17-18|21|22-24|25-33|34-40|41-47|48-57|52-53|57">apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mssql-statefulset
