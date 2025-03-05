@@ -1,0 +1,87 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mssql-statefulset
+spec:
+  serviceName: "mssql"
+  replicas: 1
+  podManagementPolicy: Parallel
+  selector:
+    matchLabels:
+      name: mssql-pod
+  template:
+    metadata:
+      labels:
+        name: mssql-pod
+    spec:
+      securityContext:
+        fsGroup: 10001
+      containers:
+        - name: mssql-container
+          image: mcr.microsoft.com/mssql/server:2022-CU16-ubuntu-20.04
+          ports:
+            - containerPort: 1433
+              name: mssql-port
+          env:
+            - name: MSSQL_PID
+              value: "Developer"
+            - name: ACCEPT_EULA
+              value: "Y"
+            - name: MSSQL_AGENT_ENABLED
+              value: "1"
+            - name: MSSQL_SA_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mssql-sa-password
+                  key: MSSQL_SA_PASSWORD
+          resources:
+            requests:
+              memory: "1024Mi"
+              cpu: "500m"
+            limits:
+              memory: "2048Mi"
+              cpu: "2000m"
+          tolerations:
+          - key: "node.kubernetes.io/unreachable"
+            operator: "Exists"
+            effect: "NoExecute"
+            tolerationSeconds: 10
+          - key: "node.kubernetes.io/not-ready"
+            operator: "Exists"
+            effect: "NoExecute"
+            tolerationSeconds: 10
+          volumeMounts:
+            - name: sqlsystem
+              mountPath: /var/opt/mssql
+            - name: sqldata
+              mountPath: /opt/sqlserver/data
+            - name: sqllog
+              mountPath: /opt/sqlserver/log
+  volumeClaimTemplates:
+    - metadata:
+        name: sqlsystem
+      spec:
+        accessModes:
+         - ReadWriteOncePod
+        resources:
+          requests:
+            storage: 25Gi
+        storageClassName: px-csi-db
+    - metadata:
+        name: sqldata
+      spec:
+        accessModes:
+         - ReadWriteOncePod
+        resources:
+          requests:
+            storage: 25Gi
+        storageClassName: px-csi-db
+    - metadata:
+        name: sqllog
+      spec:
+        accessModes:
+         - ReadWriteOncePod
+        resources:
+          requests:
+            storage: 25Gi
+        storageClassName: px-csi-db
