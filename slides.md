@@ -92,6 +92,7 @@ To give you background knowledge (and code) to run SQL Server on Kubernetes
 ### Persisting data
 <!-- .slide: style="text-align: left;"> -->
 <img src="images/pv-128.png" style="float: right"/>
+
 - Lifecycle independent
 - Follow SQL Server best practices
 - Potential for snapshotting?
