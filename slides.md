@@ -37,49 +37,89 @@ To give you background knowledge (and code) to run SQL Server on Kubernetes
 
 ## Challenges for stateful applications
 <!-- .slide: style="text-align: left;"> -->
-TBD
+- Containers are ephemeral by default
+- Provisioning storage can tie an application to a host
+- High availability & Disaster Recovery
+- Noisy neighbours
 
 ---
 
 ## Why run SQL Server on Kubernetes?
 <!-- .slide: style="text-align: left;"> -->
-TBD
+<img src="images/KubernetesLogo.png" style="float: right"/>
+
+- Quickly provision
+- Custom images
+- Built-in High Availability
+- Centralise instances
 
 ---
 
 ## SQL Server on Linux
 <!-- .slide: style="text-align: left;"> -->
-TBD
+
+<p align="center">
+  <img src="images/microsoft_loves_linux.png" />
+</p>
+
+---
+
+## SQL Server on Linux
+<!-- .slide: style="text-align: left;"> -->
+- Released in 2017
+- Achieved via the Platform Abstraction Layer (SQLPAL)
+- Prevented significant codebase changes
+- Has all SQL core engine features
+- Only supported option for containers/kubernetes
 
 ---
 
 ## Deployments vs Statefulsets
 <!-- .slide: style="text-align: left;"> -->
-TBD
+<ul>
+<li class="fragment">Technically either</li>
+<li class="fragment">Only one pod running</li>
+<li class="fragment">Realistically Statefulsets</li>
+    <ul>
+        <li class="fragment">Stable, Unique Network Identities</li>
+        <li class="fragment">Graceful Pod Termination & Recreation</li>
+        <li class="fragment">Reference PVCs with manifest</li>
+    </ul>
+</ul>
 
 ---
 
 ### Persisting data
 <!-- .slide: style="text-align: left;"> -->
-TBD
+<img src="images/pv-128.png" style="float: right"/>
+
 
 ---
 
 ### Access Modes
 <!-- .slide: style="text-align: left;"> -->
-TBD
-
----
-
-### Storage Classes
-<!-- .slide: style="text-align: left;"> -->
-TBD
+Only one SQL instance can access a database!
+<ul>
+<li class="fragment">ReadWriteOnce</li>
+<li class="fragment">ReadWriteOncePod</li>
+<ul>
 
 ---
 
 ### SA Password
 <!-- .slide: style="text-align: left;"> -->
-TDB
+- Sysadmin account in SQL Server
+- Set via an environment variable
+
+<pre><code>
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mssql-sa-password
+type: Opaque
+stringData:
+  MSSQL_SA_PASSWORD: Testing1122
+</pre></code>
 
 ---
 
@@ -175,13 +215,26 @@ spec:
 
 ## Pod Tolerations
 <!-- .slide: style="text-align: left;"> -->
-TBD
+- No SQL Server native HA solutions
+- Control how pods response when a node goes down
+- Default is 5 minutes!
 
 ---
 
 ## Example Tolerations
 <!-- .slide: style="text-align: left;"> -->
-TBD
+
+<pre><code data-line-numbers="*|2-5|6-9">
+tolerations:
+- key: "node.kubernetes.io/unreachable"
+  operator: "Exists"
+  effect: "NoExecute"
+  tolerationSeconds: 10
+- key: "node.kubernetes.io/not-ready"
+  operator: "Exists"
+  effect: "NoExecute"
+  tolerationSeconds: 10
+</pre></code>
 
 ---
 
@@ -189,23 +242,20 @@ TBD
 
 ---
 
-# Customisation
+# Testing
 
 ---
 
-## SQL Server Container Images
+## Chaos Engineering
 <!-- .slide: style="text-align: left;"> -->
-TBD
+"Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system's capability to withstand turbulent conditions in production"<br>
+<font size="6"><a href="principlesofchaos.org">principlesofchaos.org</a></font>
 
 ---
 
-## Building custom SQL Server images
-<!-- .slide: style="text-align: left;"> -->
-TBD
+## KubeInvaders
 
----
-
-# Demo
+<img src="images/KubeInvaders_75.png" style="float: center"/>
 
 ---
 
