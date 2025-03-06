@@ -90,8 +90,12 @@ To give you background knowledge (and code) to run SQL Server on Kubernetes
 ---
 
 ### Persisting data
-<!-- .slide: style="text-align: left;"> -->
-<img src="images/pv-128.png" style="float: right"/>
+<!-- .slide: style="text-align: right;"> -->
+<img src="images/pv-128.png" style="float: left"/>
+- Lifecycle independent
+- Follow SQL Server best practices
+- Potential for snapshotting?
+- Backups are still required!
 
 
 ---
@@ -111,8 +115,7 @@ Only one SQL instance can access a database!
 - Sysadmin account in SQL Server
 - Set via an environment variable
 
-<pre><code>
-apiVersion: v1
+<pre><code>apiVersion: v1
 kind: Secret
 metadata:
   name: mssql-sa-password
@@ -224,8 +227,7 @@ spec:
 ## Example Tolerations
 <!-- .slide: style="text-align: left;"> -->
 
-<pre><code data-line-numbers="*|2-5|6-9">
-tolerations:
+<pre><code data-line-numbers="*|2-5|6-9">tolerations:
 - key: "node.kubernetes.io/unreachable"
   operator: "Exists"
   effect: "NoExecute"
