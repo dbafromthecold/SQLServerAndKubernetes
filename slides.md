@@ -89,7 +89,7 @@ To give you background knowledge (and code) to run SQL Server on Kubernetes
 
 ---
 
-### Persisting data
+## Persisting data
 <!-- .slide: style="text-align: left;"> -->
 <img src="images/pv-128.png" style="float: right"/>
 
@@ -101,7 +101,7 @@ To give you background knowledge (and code) to run SQL Server on Kubernetes
 
 ---
 
-### Access Modes
+## Access Modes
 <!-- .slide: style="text-align: left;"> -->
 Only one SQL instance can access a database!
 <ul>
@@ -111,8 +111,9 @@ Only one SQL instance can access a database!
 
 ---
 
-### SA Password
+## SA Password
 <!-- .slide: style="text-align: left;"> -->
+
 - Sysadmin account in SQL Server
 - Set via an environment variable
 
