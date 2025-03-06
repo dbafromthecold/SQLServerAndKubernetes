@@ -41,7 +41,7 @@ Set-Location C:\git\SQLServerAndKubernetes\yaml
 
 
 # view sql yaml file - FIX
-Get-Content mssql-statefulset.yaml | notepad
+Get-Content mssql-statefulset.yaml | code -
 
 
 
