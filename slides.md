@@ -105,6 +105,8 @@ To give you background knowledge (and code) to run SQL Server on Kubernetes
 <!-- .slide: style="text-align: left;"> -->
 Only one SQL instance can access a database!
 <ul>
+<li class="fragment">ReadOnlyMany</li>
+<li class="fragment">ReadWriteMany</li>
 <li class="fragment">ReadWriteOnce</li>
 <li class="fragment">ReadWriteOncePod</li>
 <ul>
@@ -210,10 +212,6 @@ spec:
 
 ---
 
-# Demo
-
----
-
 # High Availability
 
 ---
@@ -239,6 +237,18 @@ spec:
   effect: "NoExecute"
   tolerationSeconds: 10
 </pre></code>
+
+---
+
+## SQL Server Always On Availability Groups
+
+<p align="center">
+  <img src="images/portworx_data_services.png" />
+</p>
+
+<p align="center">
+  <img src="images/dh2i_logo.jpg" />
+</p>
 
 ---
 
