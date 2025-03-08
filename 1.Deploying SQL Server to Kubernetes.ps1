@@ -11,19 +11,6 @@
 ############################################################################
 
 
-############################################################################
-############################################################################
-#
-# SQL Server & Kubernetes - Andrew Pruski
-# @dbafromthecold
-# dbafromthecold@gmail.com
-# https://github.com/dbafromthecold/SQLServerAndKubernetes
-# Deploying SQL Server to Kubernetes
-#
-############################################################################
-############################################################################
-
-
 
 # confirm kubectl context
 kubectl config current-context
@@ -36,12 +23,22 @@ kubectl config use-context CLUSTERNAME
 
 
 # navigate to script location
-Set-Location C:\git\SQLServerAndKubernetes\yaml
+cd /mnt/c/git/SQLServerAndKubernetes/yaml
 
 
 
-# view sql yaml file - FIX
-Get-Content mssql-statefulset.yaml | code -
+# view mssql-secret yaml file
+cat mssql-secret.yaml | code -
+
+
+
+# create secret
+kubectl apply -f mssql-secret.yaml
+
+
+
+# view mssql-statefulset yaml file - FIX
+cat mssql-statefulset.yaml | code -
 
 
 
@@ -75,22 +72,30 @@ kubectl describe pods
 
 
 
-# view sql processes with pod
-kubectl exec PODNAME -- ps aux
+# view sql processes with pod - KILL PROCESSES?
+PODNAME=$(kubectl get pods --no-headers -o custom-columns=":metadata.name")
+kubectl exec $PODNAME -- ps aux
 
 
 
 # view environment variables within pod
-kubectl exec PODNAME -- printenv
+PODNAME=$(kubectl get pods --no-headers -o custom-columns=":metadata.name")
+kubectl exec $PODNAME -- printenv
 
 
 
 # decrypt sa password in kubernetes
-TBD
+PASSWD=$(kubectl get secret mssql-sa-password --no-headers -o custom-columns=":data.MSSQL_SA_PASSWORD")
+echo $PASSWD | base64 --decode - && echo ""
 
 
 
-# deploy load balanced service - TO DO!!!!!!!!!!!!
+# view mssq-service yaml
+cat mssql-service.yaml | code -
+
+
+
+# deploy load balanced service
 kubectl apply -f mssql-service.yaml
 
 
@@ -101,22 +106,22 @@ kubectl get service
 
 
 # connect via mssql-cli
-mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT @@VERSION AS [Version];"
+mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "SELECT @@VERSION AS [Version];"
 
 
 
 # create a database
-mssql-cli -S localhost -U sa -P Testing1122 -Q "CREATE DATABASE [testdatabase];"
+mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "CREATE DATABASE [testdatabase];"
 
 
 
 # view databases
-mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT [name] FROM sys.databases;"
+mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "SELECT [name] FROM sys.databases;"
 
 
 
 # view location of database files
-mssql-cli -S localhost -U sa -P Testing1122 -Q "USE [testdatabase]; EXEC sp_helpfile;"
+mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "USE [testdatabase]; EXEC sp_helpfile;"
 
 
 
@@ -126,7 +131,7 @@ kubectl get pods -o wide
 
 
 # delete pod
-$PODNAME=$(kubectl get pods --no-headers -o custom-columns=":metadata.name")
+PODNAME=$(kubectl get pods --no-headers -o custom-columns=":metadata.name")
 kubectl delete pod $PODNAME
 
 
@@ -136,16 +141,12 @@ kubectl get pods -o wide
 
 
 
-# get service
-kubectl get service
-
-
-
 # view databases
-mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT [name] FROM sys.databases;"
+mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "SELECT [name] FROM sys.databases;"
 
 
 
 # clean up
 kubectl delete statefulset mssql-statefulset
 kubectl delete service mssql-service
+kubectl delete secret mssql-sa-password
