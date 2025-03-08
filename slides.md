@@ -240,7 +240,7 @@ spec:
 
 ---
 
-## SQL Server Always On Availability Groups
+## Always On Availability Groups
 
 <p align="center">
   <img src="images/portworx_data_services.png" />
