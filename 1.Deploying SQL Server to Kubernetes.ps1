@@ -72,7 +72,12 @@ kubectl describe pods
 
 
 
-# view sql processes with pod - KILL PROCESSES?
+# get pv and pvc
+kubectl get pv && kubectl get pvc
+
+
+
+# view sql processes with pod
 PODNAME=$(kubectl get pods --no-headers -o custom-columns=":metadata.name")
 kubectl exec $PODNAME -- ps aux
 
@@ -150,3 +155,5 @@ mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "SELECT [name] FROM sys.dat
 kubectl delete statefulset mssql-statefulset
 kubectl delete service mssql-service
 kubectl delete secret mssql-sa-password
+kubectl delete pvc --all
+kubectl delete pv --all
