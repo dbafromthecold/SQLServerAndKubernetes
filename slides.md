@@ -241,6 +241,7 @@ spec:
 ---
 
 ## Always On Availability Groups
+<!-- .slide: style="text-align: left;"> -->
 
 <p align="center">
   <img src="images/portworx_data_services.png" />
