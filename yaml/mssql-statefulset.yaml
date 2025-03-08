@@ -48,6 +48,15 @@ spec:
               mountPath: /opt/sqlserver/data
             - name: sqllog
               mountPath: /opt/sqlserver/log
+      tolerations:
+        - key: "node.kubernetes.io/unreachable"
+          operator: "Exists"
+          effect: "NoExecute"
+          tolerationSeconds: 10
+        - key: "node.kubernetes.io/not-ready"
+          operator: "Exists"
+          effect: "NoExecute"
+          tolerationSeconds: 10
   volumeClaimTemplates:
     - metadata:
         name: sqlsystem
@@ -57,6 +66,7 @@ spec:
         resources:
           requests:
             storage: 25Gi
+        storageClassName: default
     - metadata:
         name: sqldata
       spec:
@@ -65,6 +75,7 @@ spec:
         resources:
           requests:
             storage: 25Gi
+        storageClassName: default
     - metadata:
         name: sqllog
       spec:
@@ -73,3 +84,4 @@ spec:
         resources:
           requests:
             storage: 25Gi
+        storageClassName: default
