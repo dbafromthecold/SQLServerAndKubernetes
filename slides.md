@@ -54,6 +54,7 @@ To give you background knowledge (and code) to run SQL Server on Kubernetes
 - Centralise instances
 
 ---
+
 <!-- .slide: style="text-align: left;"> -->
 <p align="center">
   <img src="images/ding-containers.png" />
