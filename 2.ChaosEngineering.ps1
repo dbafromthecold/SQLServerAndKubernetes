@@ -34,7 +34,7 @@ Set-Location C:\git\SQLServerAndKubernetes\yaml
 
 
 # run pods
-kubectl apply -f .\kubeinvaders.yaml
+kubectl apply -f kubeinvaders.yaml
 
 
 

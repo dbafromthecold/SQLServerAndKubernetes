@@ -1,24 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sqlserver
+  name: demo
 spec:
-  replicas: 10
+  replicas: 20
   selector:
     matchLabels:
-      name: sqlserver
+      name: demo
   template:
     metadata:
       labels:
-        name: sqlserver
+        name: demo
     spec:
       containers:
-      - name: sqlserver1
-        image: mcr.microsoft.com/mssql/server:2022-CU16-ubuntu-20.04
-        ports:
-        - containerPort: 1433
-        env:
-        - name: SA_PASSWORD
-          value: "Testing1122"
-        - name: ACCEPT_EULA
-          value: "Y"
+      - name: demo1
+        image: nginx:latest
