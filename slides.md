@@ -25,6 +25,15 @@ To give you background knowledge (and code) to run SQL Server on Kubernetes
 
 ---
 
+## Agenda
+<!-- .slide: style="text-align: left;"> -->
+- Why run SQL Server on Kubernetes?
+- How to run SQL Server on Kubernetes
+- Persisting data
+- High availability
+
+---
+
 <p align="center">
   <img src="images/ytho.png" />
 </p>
