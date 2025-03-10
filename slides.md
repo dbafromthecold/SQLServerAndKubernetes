@@ -54,13 +54,12 @@ To give you background knowledge (and code) to run SQL Server on Kubernetes
 - Centralise instances
 
 ---
-
+<!-- .slide: style="text-align: left;"> -->
 <p align="center">
   <img src="images/ding-containers.png" />
 </p>
-
-<font size="6">
-<a href="https://www.sqlservercentral.com/articles/ding-the-world's-largest-mobile-top-up-network-streamlines-qa-with-sql-server-containers">https://www.sqlservercentral.com/articles/ding-the-world's-largest-mobile-top-up-network-streamlines-qa-with-sql-server-containers</a><br>
+<font size="4">
+<a href="https://www.sqlservercentral.com/articles/ding-the-world%E2%80%99s-largest-mobile-top-up-network-streamlines-qa-with-sql-server-containers">https://www.sqlservercentral.com/articles/ding-the-world's-largest-mobile-top-up-network-streamlines-qa-with-sql-server-containers</a><br>
 </font>
 
 ---
