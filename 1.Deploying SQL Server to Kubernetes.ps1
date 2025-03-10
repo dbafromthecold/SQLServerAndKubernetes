@@ -18,7 +18,7 @@ kubectl config current-context
 
 
 # switch context to correct cluster
-kubectl config use-context CLUSTERNAME
+kubectl config use-context docker-desktop
 
 
 
