@@ -276,23 +276,6 @@ spec:
 
 ---
 
-# Testing
-
----
-
-## Chaos Engineering
-<!-- .slide: style="text-align: left;"> -->
-"Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system's capability to withstand turbulent conditions in production"<br>
-<font size="6"><a href="principlesofchaos.org">principlesofchaos.org</a></font>
-
----
-
-## KubeInvaders
-
-<img src="images/KubeInvaders_75.png" style="float: center"/>
-
----
-
 ## Resources
 <!-- .slide: style="text-align: left;"> -->
 <font size="6">
