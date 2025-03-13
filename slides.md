@@ -19,6 +19,18 @@
 
 ---
 
+<p align="center">
+  <img src="images/raffle1.png" />
+</p>
+
+---
+
+<p align="center">
+  <img src="images/raffle2.png" />
+</p>
+
+---
+
 ## Agenda
 <!-- .slide: style="text-align: left;"> -->
 - Why run SQL Server on Kubernetes?
