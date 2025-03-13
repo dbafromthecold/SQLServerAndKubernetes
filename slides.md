@@ -19,12 +19,6 @@
 
 ---
 
-## Session Aim
-<!-- .slide: style="text-align: left;"> -->
-To give you background knowledge (and code) to run SQL Server on Kubernetes
-
----
-
 ## Agenda
 <!-- .slide: style="text-align: left;"> -->
 - Why run SQL Server on Kubernetes?
@@ -35,12 +29,8 @@ To give you background knowledge (and code) to run SQL Server on Kubernetes
 ---
 
 <p align="center">
-  <img src="images/ytho.png" />
+  <img src="images/stop-but-why.gif" />
 </p>
-
----
-
-# Background
 
 ---
 
@@ -97,7 +87,6 @@ To give you background knowledge (and code) to run SQL Server on Kubernetes
 <!-- .slide: style="text-align: left;"> -->
 <ul>
 <li class="fragment">Technically either</li>
-<li class="fragment">Only one pod running</li>
 <li class="fragment">Realistically Statefulsets</li>
     <ul>
         <li class="fragment">Stable, Unique Network Identities</li>
@@ -231,13 +220,10 @@ spec:
 
 ---
 
-# High Availability
-
----
-
-## Pod Tolerations
+## High Availability
 <!-- .slide: style="text-align: left;"> -->
 - No SQL Server native HA solutions
+- Use Tolerations
 - Control how pods response when a node goes down
 - Default is 5 minutes!
 
