@@ -7,6 +7,10 @@ Slides are here:- https://dbafromthecold.github.io/SQLServerAndKubernetes
 
 ## Additional Resources
 
+Microsoft documentation for running SQL Server on Kubernetes: -
+https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-kubernetes-best-practices-statefulsets
+
+
 Summary of my Containers and Kubernetes Blogs: -
 https://dbafromthecold.com/2017/03/15/summary-of-my-container-series
 
