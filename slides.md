@@ -176,8 +176,8 @@ spec:
               value: "Testing1122"
           resources:
             requests:
-              memory: "1024Mi"
-              cpu: "500m"
+              memory: "2048Mi"
+              cpu: "2000m"
             limits:
               memory: "2048Mi"
               cpu: "2000m"
