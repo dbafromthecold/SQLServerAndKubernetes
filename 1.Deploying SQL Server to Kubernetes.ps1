@@ -2,7 +2,7 @@
 ############################################################################
 #
 # SQL Server & Kubernetes - Andrew Pruski
-# @dbafromthecold
+# @dbafromthecold.com
 # dbafromthecold@gmail.com
 # https://github.com/dbafromthecold/SQLServerAndKubernetes
 # Deploying SQL Server to Kubernetes
@@ -22,6 +22,11 @@ kubectl config use-context docker-desktop
 
 
 
+# confirm connection to cluster
+kubectl get nodes
+
+
+
 # navigate to script location
 cd /mnt/c/git/SQLServerAndKubernetes/yaml
 
@@ -37,7 +42,18 @@ kubectl apply -f mssql-secret.yaml
 
 
 
-# view mssql-statefulset yaml file - FIX
+# view secret
+kubectl get secret mssql-sa-password -o yaml
+
+
+
+# decrypt sa password in kubernetes
+PASSWD=$(kubectl get secret mssql-sa-password --no-headers -o custom-columns=":data.MSSQL_SA_PASSWORD")
+echo $PASSWD | base64 --decode - && echo ""
+
+
+
+# view mssql-statefulset yaml file
 cat mssql-statefulset.yaml | code -
 
 
@@ -72,7 +88,13 @@ kubectl describe pods
 
 
 
-# get pv and pvc
+# view QoS
+# https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/
+kubectl describe pods | grep QoS
+
+
+
+# get pv and pvc - watch the reclaim policy!
 kubectl get pv && kubectl get pvc
 
 
@@ -86,12 +108,6 @@ kubectl exec $PODNAME -- ps aux
 # view environment variables within pod
 PODNAME=$(kubectl get pods --no-headers -o custom-columns=":metadata.name")
 kubectl exec $PODNAME -- printenv
-
-
-
-# decrypt sa password in kubernetes
-PASSWD=$(kubectl get secret mssql-sa-password --no-headers -o custom-columns=":data.MSSQL_SA_PASSWORD")
-echo $PASSWD | base64 --decode - && echo ""
 
 
 
