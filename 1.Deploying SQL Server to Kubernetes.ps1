@@ -95,7 +95,8 @@ kubectl describe pods | grep QoS
 
 
 # get pv and pvc - watch the reclaim policy!
-kubectl get pv && kubectl get pvc
+kubectl get pv
+kubectl get pvc
 
 
 
